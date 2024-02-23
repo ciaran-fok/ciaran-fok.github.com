@@ -1,7 +1,7 @@
 body {
     background-color: black;
     background-image:url('/img/background.jpg') no-repeat fixed center; ;
-    /* background-size: cover; Cover the entire background */
+    background-size: cover; /*Cover the entire background */
     /* background-position: center; */
     /* Optional: Add more properties to adjust the background */
     

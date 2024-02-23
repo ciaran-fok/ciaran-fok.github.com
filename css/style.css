@@ -19,6 +19,9 @@ p {
         color: green;
     }
     .portrait {
+        display: none; /* Display when in landscape orientation */
+    }
+    .landscape {
         display: block; /* Display when in landscape orientation */
     }
  }
@@ -30,6 +33,9 @@ p {
         color: red;
     }
     .landscape {
+        display: none; /* Display when in landscape orientation */
+    }
+    .portrait {
         display: block; /* Display when in landscape orientation */
     }
 }

@@ -3,7 +3,8 @@ body {
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the image */
     /* Optional: Add more properties to adjust the background */
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+    background-color: black;
     /* background-attachment: fixed; */
 }
 

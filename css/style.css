@@ -7,28 +7,29 @@ body {
     /* background-attachment: fixed; */
 }
 
-
 p {
-    text-size-adjust: 0.58;
     font-family: verdana;
-    color: green;
 }
 
 
 /* For landscape orientation */
 @media screen and (orientation: landscape) {
     p {
-        text-size-adjust: 0.58;
-        font-family: verdana;
+        text-size-adjust: 0.60;
         color: green;
+    }
+    .portrait {
+        display: block; /* Display when in landscape orientation */
     }
  }
 
 /* For portrait orientation */
 @media screen and (orientation: portrait) { 
     p {
-        text-size-adjust: 0.58;
-        font-family: verdana;
+        text-size-adjust: 0.80;
         color: red;
+    }
+    .landscape {
+        display: block; /* Display when in landscape orientation */
     }
 }

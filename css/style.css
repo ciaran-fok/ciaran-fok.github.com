@@ -4,7 +4,6 @@ body {
     background-size: cover; /*Cover the entire background */
     /* background-position: center; */
     /* Optional: Add more properties to adjust the background */
-    
     /* background-attachment: fixed; */
 }
 
@@ -13,4 +12,23 @@ p {
     text-size-adjust: 0.58;
     font-family: verdana;
     color: green;
+}
+
+
+/* For landscape orientation */
+@media screen and (orientation: landscape) {
+    p {
+        text-size-adjust: 0.58;
+        font-family: verdana;
+        color: green;
+    }
+ }
+
+/* For portrait orientation */
+@media screen and (orientation: portrait) { 
+    p {
+        text-size-adjust: 0.58;
+        font-family: verdana;
+        color: red;
+    }
 }

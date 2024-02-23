@@ -1,4 +1,14 @@
-p {
+body {
+    background-image: url('_img\\background.jpg');
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    /* Optional: Add more properties to adjust the background */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+}
+
+
+.Ciaran {
     text-size-adjust: 0.58;
     font-family: verdana;
     color: green;

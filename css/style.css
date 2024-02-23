@@ -1,9 +1,9 @@
 body {
-    background-image: url('/img/background.jpg') no-repeat fixed center; ;
+    background: black url('/img/background.jpg') no-repeat fixed center; ;
     /* background-size: cover; Cover the entire background */
     /* background-position: center; */
     /* Optional: Add more properties to adjust the background */
-    background-color: black;
+    /* background-color: black; */
     /* background-attachment: fixed; */
 }
 

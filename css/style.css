@@ -15,7 +15,7 @@ p {
 /* For landscape orientation */
 @media screen and (orientation: landscape) {
     p {
-        text-size-adjust: 0.60;
+        font-size: 60em;
         color: green;
     }
     .portrait {
@@ -29,7 +29,7 @@ p {
 /* For portrait orientation */
 @media screen and (orientation: portrait) { 
     p {
-        text-size-adjust: 0.80;
+        font-size: 80em;
         color: red;
     }
     .landscape {

@@ -1,5 +1,5 @@
 body {
-    background-image: url('_img/background.jpg');
+    background-image: url('/img/background.jpg');
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the image */
     /* Optional: Add more properties to adjust the background */

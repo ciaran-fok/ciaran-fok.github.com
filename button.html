@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Menu</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    .menu-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    }
+
+    .menu {
+    display: none;
+    position: absolute;
+    background: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    }
+
+    .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .menu li {
+    margin-bottom: 10px;
+    }
+
+    .menu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    transition: background 0.3s ease;
+    }
+
+    .menu li a:hover {
+    background: #f0f0f0;
+    }
+
+    .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    }
+
+    .menu.show {
+    display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Menu Button -->
+  <button id="menuBtn" class="menu-btn">
+    Menu
+    <span class="arrow">&#9660;</span>
+  </button>
+
+  <!-- Menu -->
+  <div id="menu" class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- JavaScript for menu animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.getElementById('menuBtn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menu.classList.toggle('show');
+            toggleArrow();
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!menu.contains(e.target) && e.target !== menuBtn) {
+            menu.classList.remove('show');
+            resetArrow();
+            }
+        });
+
+        function toggleArrow() {
+            const arrow = menuBtn.querySelector('.arrow');
+            arrow.classList.toggle('rotate');
+        }
+
+        function resetArrow() {
+            const arrow = menuBtn.querySelector('.arrow');
+            arrow.classList.remove('rotate');
+        }
+        });
+
+  </script>
+</body>
+</html>
+
+  

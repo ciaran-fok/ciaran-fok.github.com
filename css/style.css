@@ -72,9 +72,9 @@
 
 /* Smartphones xs*/
 @media screen and (max-width: 576px){
-    /* body {
+    body {
         background-color: pink;
-    } */
+    }
     /* logo short cut specifics */
     #shortcut-logo { width: 125px; }
     .logo-background { width: 125px; }
@@ -95,9 +95,9 @@
 
 /* Smartphones to tablets sm*/
 @media screen and (min-width:576px) and (max-width: 768px) {
-    /* body {
+    body {
         background-color: red;
-    } */
+    }
     /* logo short cut specifics */
     #shortcut-logo { width: 140px; }
     .logo-background { width: 140px; }
@@ -116,9 +116,9 @@
 
 /* Portrait tablets md*/
 @media screen and (min-width:768px) and (max-width: 992px) {
-    /* body {
+    body {
         background-color: blue;
-    } */
+    }
     /* logo short cut specifics */
     #shortcut-logo { width: 165px; }
     .logo-background { width: 165px; }
@@ -135,9 +135,9 @@
 
 /* Default lg*/
 @media screen and (min-width:992px) and (max-width: 1200px) {
-    /* body {
+    body {
         background-color: brown;
-    } */
+    }
     /* logo short cut specifics */
     #shortcut-logo { width: 165px; }
     .logo-background { width: 165px; }
@@ -155,9 +155,9 @@
 
 /* Large display el*/
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-    /* body {
+    body {
         background-color: green;
-    } */
+    }
     /* logo short cut specifics */
     #shortcut-logo { width: 200px; }
     .logo-background { width: 200px; }
@@ -177,16 +177,19 @@
 }
 
 @media screen and (min-width: 1400px) {
+    body {
+        background-color: orchid;
+    }
 }
 
 html {
     scroll-behavior: smooth;
   }
 
-body {
+/* body {
     background-image: url(../img/background.png);
     background-repeat: repeat;
     background-size: 800px auto;
     background-position-y: var(--scrollY);
     overscroll-behavior-y: none;
-}
+} */

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css"> >
+  <style>
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover, .button:active {
+      background-color: #0056b3;
+    }
+
+    /* logo short cut general */
+    .logo-container { position: fixed; display: inline-block; top: 0px; left: 0px;  transition: transform 0.2s ease-in-out; z-index: 999;}
+    .logo-background { position:absolute ; top: 0px; left: 0px; height: auto; width: 100%;}
+    .logo-bear { position: absolute; width: 57%; height: auto; transform: rotate(-10deg);  z-index: 999; transition: transform 0.1s ease-in-out;}
+
+    @media screen and (max-width: 576px){
+    body {
+        background-color: pink;
+    }
+    /* logo short cut specifics */
+    #shortcut-logo { width: 125px; }
+    .logo-background { width: 125px; }
+    .logo-bear { width: 63%; max-width: 86px; max-height: 86px; top: 18px; left: 17px; }
+    .front-page-text{ padding:170px 20px 0px 20px; }
+    #home-title { font-size: 35px;}
+    #home-intro { font-size: 18px; }
+    #home-notice{ font-size: 14px; }
+    .front-page-blocks {padding:0px 6% 0px 6%;}
+    .news { margin-top: 20px; margin-bottom: 0px;} 
+    .category { margin-top: 10px; margin-bottom: 10px; height: 110px;}
+    .tag { height: 50px;}
+    .category-text { font-size: 17px; line-height: 19px;}
+    .category .row {margin-bottom: 8%; padding-left: 6%; }
+    .ribbon { width: 50px;  height: 50px; }
+    
+}
+
+  </style>
+</head>
+<body>
+  <a href="#" class="button">Click Me</a>
+  <a id="shortcut-logo" class="logo-container" href="#">
+    <img class="logo-background" src="img/ellipse.png" alt="logo background">
+    <img class="logo-bear" src="img/logo_bear.png" alt="'logo bear">
+  </a>
+</body>
+</html>

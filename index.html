@@ -4,142 +4,197 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- phone screen won't zoom in or zoom out -->
         <title>Ciaran & Noam's Public Notebook - Homepage</title>
-        <meta name="author" content="Yim Man Ching">
-        <meta name="copyright" content="Yim Man Ching">
+        <meta name="author" content="ywjmurcline">
+        <meta name="copyright" content="ywjmurcline">
         <meta name="theme-color" content="#FFD966">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Ciaran & Noam's Public Notebook">
-        <meta property="og:url" content="http://ciaran-fok.github.io/index.html">
-        <meta property="og:site_name" content="Ciaran & Noam's Public Notebook">
         <meta property="og:locale" content="en_US">
         <meta name="twitter:card" content="summary">
         <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Twitter Bootstrap -->
-        <link rel="stylesheet" href="css/override_plus.css"> 
-        <link rel="stylesheet" href="css/style.css"> 
-        <link rel="stylesheet" href="css/test.css"> 
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/script.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.2.20/dist/vue.min.js"></script> -->
+        <link rel="stylesheet" href="css/override.css"> 
+        <link rel="stylesheet" href="css/general.css"> 
+        <link rel="stylesheet" href="css/index.css"> 
+        <link rel="stylesheet" href="css/birthday.css">
+        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     </head>
     <body>
+        <div id="toload">
+        </div>
         <header>
-            <a id="shortcut-logo" class="logo-container" href="#">
-              <img class="logo-background" src="img/ellipse.png" alt="logo background">
-              <img class="logo-bear" src="img/logo_bear.png" alt="'logo bear">
+            <a id="logo-container" href="#">
+                <!-- logo.html -->
             </a>
-            <div class="ribbon">
-              <div class="row bottons-holder">
-                <button class="ribbon-button d-none d-md-block col-md-2">ABOUT</button>
-                <button class="ribbon-button d-none d-md-block col-md-3">CONTACT</button>  
-                <button class="ribbon-button-long d-none d-md-block col-md-4">CATAGORIES</button>
-                <button class="ribbon-button-extralong d-none d-sm-block col-md-3">SEARCH</button>
-                <button id="menuBtn" class="ribbon-button menu-btn d-block d-sm-none">MENU</button>
-              </div>
+            <a id="headshot-container" class="d-none d-lg-block">
+                <!-- headshot.html -->
+            </a>            
+            <div id="banner" class="banner-container">
+                <div id="button-holder">
+                    <a class="banner-button"></a>
+                </div>
             </div>
-            <div id="headshot" class="d-md-none d-lg-block headshot-container"> </div>
-        </header>
-        <div class="container d-none d-sm-block">
-          <div class="row">
-            <div class=" col-xs-12 col-lg-7 col-xl-8 front-page-text">
-              <p id="home-title" class="bold mg-a--1">Welcome to Ciaran & Noam's</p>
-              <p id="home-title" class="bold mg-a-3">Personal Website!</p>
-              <p id="home-intro"  class="mg-a-2"><a class="bold">Researcher</a> and <a class="bold">Comedy Lover</a>.</p>
-              <p id="home-intro">This website features notes on neuroscience, </p>
-              <p id="home-intro" class="mg-a-7">psychology, computer science and comedy.</p>
-              <p id="home-notice">To better enjoy the website, please check out <a class="link" href="pages/about.html">about the website.</a></p>
+            <div id="front-page-text">
+                <!-- front-page-text -->
             </div>
-          </div>
+        </header> 
+        <div id="birthday">
+            <div id="happy-birthday"> Happy Birthday</div>
+            <div id="birthday-roll1" class="birthday-roll">
+                <div class="film"> <div class="image-mask"></div><img src="img/download.jpg"> </div>
+                <div class="film"> <div class="image-mask"></div><img src="img/download2.jpg"> </div>
+                <div class="film"> <div class="image-mask"></div><img src="img/download3.jpg"> </div>
+                <div class="film"> <div class="image-mask"></div><img src="img/download4.jpg"></div>
+                <div class="film"> <div class="image-mask"></div><img src="img/download1.jpg"></div>
+
+            </div>
+            <div id="lyric"></div>
+            <div id="birthday-roll2" class="birthday-roll"> roll 2</div>
+            <div id="interaction"></div>
+            <div id="instruction"></div>
         </div>
-        <div class="container d-xs-block d-sm-none">
-          <div class="row">
-            <div class=" col-xs-12 col-lg-7 front-page-text">
-              <p id="home-title" class="bold mg-a--1">Welcome to Ciaran </p>
-              <p id="home-title" class="bold mg-a--1"> & Noam's</p>
-              <p id="home-title" class="bold mg-a-3">Personal Website!</p>
-              <p id="home-intro" class="mg-a-2"><a class="bold">Researcher</a> and <a class="bold">Comedy</a> Lover.</p>
-              <p id="home-intro">This website features notes on  </p>
-              <p id="home-intro">neuroscience, psychology, computer </p>
-              <p id="home-intro" class="mg-a-7"> science and comedy.</p>
-              <p id="home-notice">To better enjoy the website, please check out</p>
-              <p id="home-notice"><a class="link" href="pages/about.html">about the website.</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="container front-page-blocks">
-          <div class="row">
-            <div class="d-block d-lg-none col-12 my_col">
-              <div class="test update">
-                Update
-              </div>
-            </div>
-            <div class="col-xs-12 col-lg-6 col-md-7 my_col">
-              <div class="test rotator">
-                Rotate 
-              </div> 
-            </div>
-            <div class="col-xs-12 col-lg-4 col-md-5 my_col"> 
-              <div class="test news">
-                News1
-              </div>
-              <hr class="my-hr d-none d-md-block">
-              <div class="test news">
-                News2
-              </div>
-            </div>
-            <div class="col-lg-2 my_col">
-              <div class="d-none d-lg-block test update">
-                Update
-              </div>
-              <div class="d-none d-sm-block test tag">
-                Tag
-              </div>
-            </div>
-          </div>
-          <hr class="d-none d-sm-block my-hr">
-          <div class="row">
-            <div class="col-6 col-sm-6 col-md-3 my_col">
-              <div class="category" id="coding">
-                <div class="image-mask"></div>
-                <img src="img/computer-science.jpg" alt="Description of Image">
-                <div class="row">
-                  <div class="category-text d-none d-sm-block">COMPUTER SCIENCE</div>
-                  <div class="category-text d-sm-none">COMPUTER</div>
-                  <div class="category-text d-sm-none">SCIENCE</div>
-                  <div class="category-text">& CODING</div>
+        <div id="blocks" class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6 col-md-7">
+                    <div id="rotator" class="shadow1">
+                        <button id="prev-btn"><img class="btn-img" src="img/left.png"></button>
+                        <button id="next-btn"><img class="btn-img" src="img/right.png"></button>
+                        <div class="image-text-block active">
+                            <div class="ITB-image-mask"></div>
+                            <img class="ITB-img" src="img/placeholder.jpg">
+                            <div class="ITB-text">
+                                <div class="title"> This is A title</div>
+                                <div class="summary"> Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard</div>
+                                <div class="tag-holder">
+                                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                                    <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-text-block">
+                            <div class="ITB-image-mask"></div>
+                            <img class="ITB-img" src="img/placeholder2.jpg">
+                            <div class="ITB-text">
+                                <div class="title"> This is A title</div>
+                                <div class="summary"> Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard</div>
+                                <div class="tag-holder">
+                                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                                    <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-text-block">
+                            <div class="ITB-image-mask"></div>
+                            <img class="ITB-img" src="img/placeholder3.jpg">
+                            <div class="ITB-text">
+                                <div class="title"> This is A title</div>
+                                <div class="summary"> Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard Lorem Ipsum has been the industry's standard</div>
+                                <div class="tag-holder">
+                                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                                    <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-3 my_col">
-              <div class="category" id="comedy">
-                <div class="image-mask"></div>
-                <img src="img/comedy.jpg" alt="Description of Image">
-                <div class="row">
-                  <div class="category-text">COMEDY</div>
+                <div class="col-xs-12 col-lg-4 col-md-5 " id="news-container"> 
+                    <div id="announcement" class="news">
+                        <div id="announcement-title">
+                            <img id= "anc=logo" class="news-logo" src="img/icons8-announcement-100.png"><a class="news-title">Announcement</a>
+                        </div>
+                        <div id="announcement-content">
+                            <div class="clamp4">
+                                <p>Hey guys! Welcome to our site! Thank you Mur for building this, this is awesome! -- Ciaran and Noam Thank you Mur for building this, this is awesome! -- Ciaran and Noam</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-hr d-none d-md-block">
+                    <div id="development" class="news">
+                        <div id="development-title">
+                            <img id="dev-logo" class="news-logo" src="img/icons8-tech-100.png"><a class="news-title">Deveopment News</a>
+                        </div>  
+                        <div id="development-content">
+                            <div class="clamp4">
+                                <p>The site rolled out on March 14, 2024</p>
+                                <p> Click <a class="tech-link" href="development-log.html">here</a> to read more about technical details of this site.</p>
+                            </div>
+                        </div>  
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-3 my_col">
-              <div class="category" id="literature">
-                <div class="image-mask"></div>
-                <img src="img/literature.jpg" alt="Description of Image">
-                <div class="row">
-                  <div class="category-text">LITERATURE</div>
-                  <div class="category-text">& FILM</div>
+                <div class="col-lg-2 my_col">
+                    <div id="last-update" class="d-none d-sm-block">
+                      <div id="update-sign">Last Updated</div>
+                      <div id="dynamic-date">March 11, 2024</div>
+                    </div>
+                    <div id="recent-tags" class="d-none d-sm-block">
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
+                        <a class="tag"> <div class="tag-content"> comedy </div> </a>
+                        <a class="tag"> <div class="tag-content"> book </div> </a>
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
+                        <a class="tag"> <div class="tag-content"> comedy </div> </a>
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
+                        <a class="tag"> <div class="tag-content"> comedy </div> </a>
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
+                        <a class="tag"> <div class="tag-content"> comedy </div> </a>
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
+                        <a class="tag"> <div class="tag-content"> comedy </div> </a>
+                        <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-3 my_col">
-              <div class="category" id="neuroscience">
-                <div class="image-mask"></div>
-                <img src="img/neuroscience.jpg" alt="Description of Image">
-                <div class="row">
-                  <div class="category-text">NEUROSCIENCE</div>
-                  <div class="category-text">& PSYCHOLOGY</div>
+            <hr class="d-none d-sm-block my-hr">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="category">
+                        <div id="computer" class="image-text-block">
+                            <div class="ITB-image-mask"></div>
+                            <img class="ITB-img" src="img/computer-science.jpg">
+                            <div class="ITB-text d-none d-sm-block">COMPUTER SCIENCE<br>& CODING</div>
+                            <div class="ITB-text d-sm-none">COMPUTER<br>SCIENCE<br>& CODING</div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="category">
+                        <div id="comedy" class="image-text-block">
+                            <div class="ITB-image-mask"></div>
+                            <img class="ITB-img" src="img/comedy.jpg">
+                            <div class="ITB-text">COMEDY</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="category">
+                        <div id="literature" class="image-text-block">
+                            <div class="ITB-image-mask"></div>
+                            <img class="ITB-img" src="img/literature.jpg">
+                            <div class="ITB-text">LITERATURE<br>& FILM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="category">
+                        <div id="neuroscience" class="image-text-block">
+                            <div class="ITB-image-mask"></div>
+                            <img class="ITB-img" src="img/neuroscience.jpg">
+                            <div class="ITB-text">NEUROSCIENCE<br>& PSYCHOLOGY</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
     </body>
-
+    <footer>
+        Copyright &copy; Ciaran & Noam Fok
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/rotator.js"></script>
 </html>

@@ -1,0 +1,40 @@
+:root {
+    --my-theme-color: #FFD996; 
+    --my-theme-color-light: #ffe0aa;
+    --my-text-primary: #fff;
+    --my-text-light: #fff9eb;
+    --my-tag-text: #e3a810;
+    --my-announcement: #fffaf0;
+    --my-technique: #94D82D;
+    --my-development: #fafff3;
+}
+.bold { font-weight: bold; color: inherit; text-decoration: inherit; }
+
+p { 
+    margin-block-start: 0; 
+    margin-block-end: 0; 
+    margin: 0; 
+    margin-inline-start: 0; 
+    margin-inline-end: 0; 
+}
+
+.link { color: var(--my-theme-color);}
+
+@media (hover: hover) {
+    .link:hover { color: var(--my-theme-color-light); }
+    .link:active{ color: var(--my-theme-color-light); }
+}
+
+.link:visited { color: var(--my-text--primary); }
+
+* {
+    font-family: sans-serif;
+    color: var(--my-text-primary);
+}
+
+*::selection {
+    color: whitesmoke;
+    background: #ffd966e0;
+  
+}
+

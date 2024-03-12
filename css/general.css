@@ -1,0 +1,265 @@
+/* Everything About The Loading Sign */
+#loading-gif {
+    position: absolute;
+    left: 45vw;
+    top: 40vh;
+    width: 10vw;
+    z-index: 999;
+}
+#loading-background{
+    background-color: #242424;
+    background-size: 100vw 100vh;
+}
+
+/* UTILITIES */
+/* .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+/* Start Everything About The Bear Logo On The Upper Left Corner*/
+#logo-container {
+    position: fixed; display: inline-block;
+    top: 0px; left: 0px; z-index: 999;
+    transition: transform 0.2s ease-in-out;
+    z-index: 999; 
+}
+#logo-ellipse { 
+    position: absolute; 
+    top: 0px; left: 0px; 
+    height: auto; width: 100%;
+    z-index: 999; 
+}
+#logo-bear { 
+    position: absolute; z-index: 999; 
+    width: 57%; height: auto; 
+    transform: rotate(-10deg);  
+    transition: transform 0.15s ease-in-out;
+    z-index: 999; 
+}
+@media (hover: hover) {
+    #logo-container:hover { transform: scale(1.05); }
+    #logo-container:hover #logo-bear{ transform: rotate(5deg); } 
+}
+/* Smartphones xs*/
+@media screen and (max-width: 576px){
+    #logo-container { width: 125px; }
+    #logo-background { width: 125px; }
+    #logo-bear { width: 63%; max-width: 86px; max-height: 86px; top: 18px; left: 17px; }   
+}
+/* Smartphones to tablets sm*/
+@media screen and (min-width:576px) and (max-width: 768px) {
+    /* logo short cut specifics */
+    #logo-container { width: 140px; }
+    #logo-background { width: 140px; }
+    #logo-bear { width: 60%; max-width: 86px; max-height: 86px; top: 23px; left: 22px; }
+}
+/* Portrait tablets md*/
+@media screen and (min-width:768px) and (max-width: 992px) {
+    /* logo short cut specifics */
+    #logo-container { width: 165px; }
+    #logo-background { width: 165px; }
+    #logo-bear { max-width: 100px; max-height: 100px; top: 28px; left: 27px; }
+}
+/* Default lg*/
+@media screen and (min-width:992px) and (max-width: 1200px) {
+    #logo-container{ width: 165px; }
+    #logo-background { width: 165px; }
+    #logo-bear { max-width: 100px; max-height: 100px; top: 28px; left: 27px; }
+}
+/* Large display el*/
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #logo-container { width: 200px; }
+    #logo-background { width: 200px; }
+    #logo-bear { max-width: 115px; max-height: 115px; top: 32px; left: 32px; }
+}
+@media screen and (min-width: 1400px) {
+    #logo-container { width: 230px; }
+    #logo-background { width: 230px; }
+    #logo-bear { max-width: 135px; max-height: 135px; top: 35px; left: 35px; }
+}
+/* End Everything About The Bear Logo On The Upper Left Corner*/
+
+/* Start General Stuff Like Scroll Sensitivity and Background */
+html { scroll-behavior:smooth;}
+body {
+    background-image: linear-gradient(30deg, #242424, #121212);
+    background-size: 100vw 100%;
+    background-position-y: var(--scrollY);
+    overscroll-behavior-y: none;
+}
+/* End General Stuff Like Scroll Sensitivity and Background */
+
+
+/* Style Of The Tag */
+.tag {
+    border-radius: 1px;
+    text-decoration: none; text-transform: uppercase; font-weight: bold;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    background-color: whitesmoke;
+    padding: 2px 10px 2px 10px;
+    margin: 2px 0px;
+}
+.tag-content {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--my-tag-text);
+    font-size: 10px;
+}
+@media (hover: hover) {
+    .tag:hover {background-color: #E6AF00; cursor: pointer; }
+    .tag:hover .tag-content {color:whitesmoke; cursor: pointer;}
+}
+
+/* Style of IMAGE-TEXT-BLOCK */
+.tag-holder {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 32px; 
+    width: 100%;
+    padding: 2px 0px;
+    margin: 0px;
+    gap: 6px;
+    overflow: hidden;
+}
+.title {
+    color: var(--my-text-light);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 30px;
+    font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+}
+.summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.date {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 5px 0px;
+}
+.date .time-logo {
+    height: 20px;
+    padding: 1px;
+}
+.date .the-date {
+    color: rgb(238, 238, 238);
+    font-size: 13px;
+    height: 20px;
+    text-decoration: none;
+    padding: 0px 0px 0px 6px;
+}
+
+.image-text-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.ITB-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3%;
+}
+
+.ITB-image-mask {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    background-color: rgba(24, 24, 24, 0.55);
+}
+
+.ITB-img { 
+    display: block; width: 100%; height: 100%;  object-fit: cover; 
+}
+
+.shadow1 {
+    box-shadow: 0px 0px 5px 2px rgba(255, 229, 143, 0.05);
+    /* transition: box-shadow 0.1s ease-in-out; */
+}
+
+@keyframes tilt-shaking-stop {
+    0% { transform: rotate(0deg); }
+    2% { transform: rotate(8deg); }
+    4% { transform: rotate(0deg); }
+    6% { transform: rotate(-8deg); }
+    8% { transform: rotate(0deg); }
+    10% { transform: rotate(0deg); }
+    12% { transform: rotate(8deg); }
+    14% { transform: rotate(0deg); }
+    16% { transform: rotate(-8deg); }
+    18% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes roll-over-stop {
+        0% {
+          transform: rotateZ(0);
+        }
+        25% {
+            transform: rotateZ(90deg);
+        }
+        50% {
+            transform: rotateZ(180deg);
+          }
+        75% {
+          transform: rotateZ(270deg);
+        }
+        100% {
+          transform: rotateZ(360deg);
+        }
+}
+
+
+
+
+
+
+/* Boot Strap Template */
+/* Smartphones xs*/
+@media screen and (max-width: 576px){
+    
+}
+
+/* Smartphones to tablets sm*/
+@media screen and (min-width:576px) and (max-width: 768px) {
+   
+}
+
+/* Portrait tablets md*/
+@media screen and (min-width:768px) and (max-width: 992px) {
+ 
+}
+
+/* Default lg*/
+@media screen and (min-width:992px) and (max-width: 1200px) {
+    
+}
+
+/* Large display el*/
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+   
+}
+
+@media screen and (min-width: 1400px) {
+  
+}
+
+footer{
+    background-color: #101010; width: 100%; height: 40px; font-size: 13px; color: var(--my-text-light);
+    text-align: center;
+    padding-top: 8px;
+}

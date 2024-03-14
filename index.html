@@ -16,7 +16,8 @@
         <link rel="stylesheet" href="css/general.css"> 
         <link rel="stylesheet" href="css/index.css"> 
         <link rel="stylesheet" href="css/birthday.css">
-        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb" rel="stylesheet"> -->
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     </head>
     <body>
@@ -24,21 +25,30 @@
         </div>
         <header>
             <a id="logo-container" href="#">
-                <!-- logo.html -->
+                <img id="logo-ellipse" src="img/ellipse.png" alt="logo background">
+                <img id="logo-bear" src="img/logo_bear.png" alt="logo bear">    
             </a>
             <a id="headshot-container" class="d-none d-lg-block">
-                <!-- headshot.html -->
+                <img class="headshot-img" id="headshot" src="img/headshot.png">
+                <img class="headshot-img" id="ring1" src="img/ring1.png">
+                <img class="headshot-img" id="ring2" src="img/ring2.png">
             </a>            
-            <div id="banner" class="banner-container">
+            <div id="banner" class="d-none d-sm-block">
                 <div id="button-holder">
-                    <a class="banner-button"></a>
+                    <a class="banner-button left-most" href="about.html">About</a>
+                    <a class="banner-button" href="contact.html">Contact</a>
+                    <a class="banner-button" href="friends.html">Friends</a>
+                    <a id="browse" class="banner-button" href="search.html">Browse <img class="banner-logo" src="img/icons8-search-100.png"></a>
                 </div>
             </div>
-            <div id="front-page-text">
-                <!-- front-page-text -->
+            <div id="banner-tiny" class="d-block d-sm-none">
+                <img id="banner-logo" src="img/banner-logo.png">
             </div>
         </header> 
-        <div id="birthday" class="d-none">
+        <div id="front-page-text">
+            <!-- front-page-text -->
+        </div>
+        <!-- <div id="birthday">
             <div id="happy-birthday"> Happy Birthday</div>
             <div id="birthday-roll1" class="birthday-roll">
                 <div class="film"> <div class="image-mask"></div><img src="img/download.jpg"> </div>
@@ -52,7 +62,7 @@
             <div id="birthday-roll2" class="birthday-roll"> roll 2</div>
             <div id="interaction"></div>
             <div id="instruction"></div>
-        </div>
+        </div> -->
         <div id="blocks" class="container">
             <div class="row">
                 <div class="col-xs-12 col-lg-6 col-md-7">
@@ -100,7 +110,7 @@
                 <div class="col-xs-12 col-lg-4 col-md-5 " id="news-container"> 
                     <div id="announcement" class="news">
                         <div id="announcement-title">
-                            <img id= "anc=logo" class="news-logo" src="img/icons8-announcement-100.png"><a class="news-title">Announcement</a>
+                            <img id= "anc-logo" class="news-logo" src="img/icons8-announcement-100.png"><a class="news-title">Announcement</a>
                         </div>
                         <div id="announcement-content">
                             <div class="clamp4">

@@ -1,5 +1,5 @@
 :root {
-    --my-theme-color: #FFD996; 
+    --my-theme-color: #FFD966; 
     --my-theme-color-light: #ffe0aa;
     --my-text-primary: #fff;
     --my-text-light: #fff9eb;
@@ -27,6 +27,12 @@ p {
 
 .link:visited { color: var(--my-text--primary); }
 
+:checked {
+    accent-color: var(--my-theme-color);
+}
+
+
+
 * {
     font-family: sans-serif;
     color: var(--my-text-primary);
@@ -37,4 +43,10 @@ p {
     background: #ffd966e0;
   
 }
+
+/* body {
+    background-color: transparent;
+    background-image: none;
+    background: none;;
+} */
 

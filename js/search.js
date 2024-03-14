@@ -37,13 +37,6 @@
     }
 
 
-
-    fetchHTML('front-page-text.html').then(function(myHTML) {
-        insertHtml('#front-page-text', myHTML);
-    });
-
     finishLoading();
-
-
 
 }) (window);

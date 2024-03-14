@@ -1,0 +1,206 @@
+#result-display-area{
+    min-height: 100vh;
+    position: relative;
+}
+
+
+
+.test-block {
+    background-color: red;
+    height: 100px;
+    margin: 50px;
+    width: 80%;
+}
+
+.article-unit {
+    display: flex;
+    flex-direction: row ;
+    position: relative;
+    background-color: rgba(214, 214, 214, 0.1);
+    /* height:fit-content; */
+    min-height: 170px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 35px 0px;
+    box-shadow: 0px 0px 2px 1px rgba(255, 249, 230, 0.3);
+    /* box-shadow: 0px 0px 1px 1px rgba(255, 242, 204, 0.5); */
+    transition: transform 0.3s;
+}
+
+.image-text-block {
+    position: relative;
+    width: 35%;
+    overflow: hidden;
+    height: auto;
+    display: block;
+}
+
+.ITB-image-mask {
+    background-color: rgba(24, 24, 24, 0.4);
+}
+
+.ITB-text {
+    position: relative;
+    width: 65%;
+    padding: 8px 13px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.title {
+    text-transform:capitalize;
+    font-weight: 700;
+    color: rgb(255, 253, 243);
+    font-size: 25px;
+    display: -webkit-box;
+    line-height: 110%;
+    padding: 2px 0px 5px 0px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+}
+
+.summary {
+    font-weight:300;
+    color: rgb(213, 213, 213);
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.date {
+    align-self: flex-end;
+    display: inline-flex;
+    flex-direction: row;
+    padding: 5px 0px 0px 0px;
+}
+
+@media (hover: hover) {
+    .article-unit:hover {
+        transform: scale(1.01);
+        box-shadow: 0px 0px 3px 1.5px rgba(255, 249, 230, 0.35);
+    }
+}
+
+#search-bundle {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    /* animation: left 1s ease-in-out; */
+}
+
+#search {
+    padding: 70px 5% 5% 5%;
+    position: relative;
+    width: 100%;
+    background-color: #ffe085;
+    /* background-image: linear-gradient(53deg, #ffe696ee,  #fff1c2ed,#fff1c2ed, #ffe696ee); */
+    border-image: linear-gradient(#e6ca70, #d6a33c, #feedb2);
+    border-left-width: 2px;
+    border-style: solid;
+    box-shadow: 0px 0px 2px 2px rgba(255, 234, 164, 0.7);
+    height: 100vh;
+}
+
+#recent-tags {
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    align-items: flex-start;
+    height: 270px; 
+    width: 100%;
+    padding: 7px 5px;
+    margin: 0px;
+    gap: 6px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+
+#search-fold-button {
+    position: absolute;
+    top: 45%;
+    left: -30px;
+    width: 30px;
+    height: 80px;
+    /* background-color: red; */
+}
+.search-button img{
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    width: 10px;
+    height: auto;
+    opacity: 0.8;
+}
+#unfold-button {
+    animation: toLeft 3s infinite;
+}
+
+
+
+/* Smartphones xs*/
+@media screen and (max-width: 576px) and (orientation: portrait){
+    #search-bundle { width: 100%; }
+    #result-display-area{ width: 100%; }
+}
+
+/* Smartphones xs*/
+@media screen and (max-width: 576px) and (orientation: landscape){
+    #search-bundle { width: 230px; }
+    #result-display-area{ 
+        width: 100%; 
+        padding: 70px 6% 50% 6%;
+    }
+}
+
+/* Smartphones to tablets sm*/
+@media screen and (min-width:576px) and (max-width: 768px) {
+    #search-bundle { width: 230px; }
+    #result-display-area{ 
+        width: 100%; 
+        padding: 70px 10% 50% 10%;
+    }
+}
+
+/* Portrait tablets md*/
+@media screen and (min-width:768px) and (max-width: 992px) {
+    #search-bundle { width: 26%; min-width: 230px;}
+    #result-display-area{ 
+        width: 74%; 
+        padding: 70px 6% 50% 10%;
+    }
+}
+
+/* Default lg*/
+@media screen and (min-width:992px) and (max-width: 1200px) {
+    #search-bundle { width: 23%; min-width: 230px;}
+    #result-display-area{ 
+        width: 77%; 
+        padding: 70px 4% 50% 10%;
+    }
+}
+
+/* Large display el*/
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #search-bundle { width: 23%; }
+    #result-display-area{ 
+        width: 77%; 
+        padding: 70px 10% 50% 15%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #search-bundle { width: 23%; }
+    #result-display-area{ 
+        width: 77%; 
+        padding: 70px 10% 50% 15%;
+    }
+}

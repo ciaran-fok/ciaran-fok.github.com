@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- phone screen won't zoom in or zoom out -->
+        <title>Ciaran & Noam's Public Notebook - Homepage</title>
+        <meta name="author" content="ywjmurcline">
+        <meta name="copyright" content="ywjmurcline">
+        <meta name="theme-color" content="#FFD966">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Ciaran & Noam's Public Notebook">
+        <meta property="og:locale" content="en_US">
+        <meta name="twitter:card" content="summary">
+        <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Twitter Bootstrap -->
+        <link rel="stylesheet" href="css/override.css"> 
+        <link rel="stylesheet" href="css/general.css"> 
+        <link rel="stylesheet" href="css/contact.css"> 
+        <!-- <link rel="stylesheet" href="css/birthday.css"> -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb" rel="stylesheet"> -->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    </head>
+    <body>
+        <div id="toload">
+        </div>
+        <header>
+            <a id="logo-container" href="index.html">
+                <img id="logo-ellipse" src="img/ellipse.png" alt="logo background">
+                <img id="logo-bear" src="img/logo_bear.png" alt="logo bear">    
+            </a>
+            <div id="banner" class="d-none d-sm-block">
+                <div id="button-holder">
+                    <a class="banner-button left-most" href="about.html">About</a>
+                    <a class="banner-button" href="contact.html">Contact</a>
+                    <a class="banner-button" href="friends.html">Friends</a>
+                    <a id="browse" class="banner-button" href="search.html">Browse <img class="banner-logo" src="img/icons8-search-100.png"></a>
+                </div>
+            </div>
+            <div id="banner-tiny" class="d-block d-sm-none">
+                <img id="banner-logo" src="img/banner-logo.png">
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div id="thanks">
+                    Thank you for reaching out to us. Please leave your message below. 
+                </div>
+                <div id=""><input type="checkbox" id="scales" name="scales" checked /> 
+                    <label for="scales">Check this box if you are reporting a technical issue. (Tech related stuff will go straight to Mur). 
+                </label> </div>
+                <div id="quick-note">
+                    A Quick Note if you are reporting a technical glitch: 
+                    Please be as specific as possible. Please include:
+                    - What kind of device (e.g. laptop, phone, pad) you were you using when the bug happened? 
+                    - Whicth browser (Chrome, Safari, Firefox, etc.) you were using when the glitch happened? 
+                    - and include a detailed description of the problem.
+                    e.g. I am using a iphone12S, to read the article "I don't know", and I noticed the green callout box overflowed the screen.
+                     I'd like to apologize in advance for the inconvenience, and thank you so much for your cooperation, cause if I cannot recreate the bug, I cannot fox it. -- Mur
+                    Use Chinese if you like, we all speak Chinese. This site is in English mainly because 1. We wish this can be read by more people around the world 
+                    2. Chinese fonts are annoying 3. No parsing needed.
+                </div>
+            </div>
+            <div class="row">
+                <div id="mail-holder">  
+                    <form action="https://postmail.invotes.com/send" method="post" id="email_form">
+
+                        <input id="subject" type="text" name="subject" placeholder="Subject" />
+                        <textarea name="text" placeholder="Message"></textarea>
+                        <input type="hidden" name="access_token" value="l670q5wdm1694u5a2665eels" />
+                         <!-- return urls can be fully qualified -OR-
+                            start with / for root relative -OR-
+                            start with . for url relative --> 
+                        <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                        <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+                        <input id="submit_form" type="submit" value="Send" />
+                        <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+                        
+                    </form>
+                </div>
+                <p id="notice-again"> 
+                    The emailing function is powered by <a class="link" href="https://postmail.invotes.com" target="_blank">PostMail</a>. 
+                    If the service failed, you can find us on <a class="link" href="https://github.com/ciaran-fok">our github page</a>.
+                </p>
+            </div>
+        </div>
+    </body>
+    <footer>
+        Copyright &copy; Ciaran & Noam Fok
+    </footer>
+    <!-- optional, prevents the submit button from being pressed more than once -->
+    <script>
+        var submitButton = document.getElementById("submit_form");
+        var form = document.getElementById("email_form");
+        form.addEventListener("submit", function (e) {
+            setTimeout(function() {
+                submitButton.value = "Sending...";
+                submitButton.disabled = true;
+            }, 1);
+        });
+    </script> 
+</html>

@@ -166,10 +166,12 @@ ol {
     right: 3px;
 }
 
-html::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
-    overflow-x: hidden;
+}
 
+body {
+    overflow-x: hidden;
 }
 
 .callout {
@@ -215,7 +217,11 @@ html::-webkit-scrollbar {
     height: auto;
     position: relative;
 }
-.img-division p {
+
+/* .img-container:active {
+    width: 100%;
+} */
+.caption {
     margin-left:auto;
     margin-right: auto;
     width: 70%;
@@ -225,6 +231,9 @@ html::-webkit-scrollbar {
     line-height: 17px;
     color: grey;
 }
+.caption.active-caption {
+    width: 100%;
+}
 .img-container.active-container {
     width: 100%;
 }
@@ -232,6 +241,8 @@ html::-webkit-scrollbar {
     width: 100%;
     height: 100%;
 }
+
+
 
 
 .article-img-mask {

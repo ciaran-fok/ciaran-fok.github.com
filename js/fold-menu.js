@@ -1,29 +1,35 @@
-var windowW;
-var windowH;
-var unfoldBtn = $('#unfold-button');
-var foldBtn = $('#fold-button');
-var article = $('#article-text');
+// var windowW;
+// var windowH;
+
+// var article = $('#article-text');
 // var contentWidth;
-var content = $('#content-block');
-var contentWidth = $('#content-block')[0].getBoundingClientRect().width;
+// var content = $('#content-block');
+// var contentWidth = $('#content-block')[0].getBoundingClientRect().width;
 $(document).ready(function() {
 
+    var unfoldBtn = $('#unfold-button');
+    var foldBtn = $('#fold-button');
     $("#fold-unfold-button").click(function() {
         // reply.animate({right: "-=230px"}, 2000)
+        var article = $('#article-text');
         var content = $('#content-block');
 
         if (content.hasClass('folded')) {
+            console.log("1");
 
             var contentWidth = $('#content-block')[0].getBoundingClientRect().width;
-            
+            // var article = $('#article-text');
+            windowW = parseInt($(window).width(), 10);  
             var distance = contentWidth + 15;
 
             console.log('distance', -distance);
             // content.animate({width: 300}, 1000)
             content[0].style.transition= 'transform 0.6s ease-in-out';
             content[0].style.transform = `translateX(-${distance}px)`;
-            if(windowW >= 992 && windowW <1200) {
-
+            console.log(windowW)
+            if((windowW >= 992) && (windowW <1200)) {
+                console.log("3");
+                // article[0].hide();
                 article[0].style.transition= 'transform 0.6s ease-in-out';
                 article[0].style.transform = `translateX(-${0.5 * distance}px)`;
                 }
@@ -35,6 +41,8 @@ $(document).ready(function() {
 
         } 
         else {
+            windowW = parseInt($(window).width(), 10);  
+            console.log("2");
             // content.animate({width: 0}, 1000).addClass('folded');
             content[0].style.transition= 'transform  0.5s ease-in-out';
             content[0].style.transform = `translateX(0)`;
@@ -42,13 +50,14 @@ $(document).ready(function() {
                 article[0].style.transition= 'transform 0.6s ease-in-out';
                 article[0].style.transform = `translateX(0)`;
             }
+            content.addClass('folded');
             unfoldBtn.fadeIn();
             foldBtn.fadeOut();
-            
-            content.addClass('folded');
             // article.addClass("toCentral");
         }
     });
+
+
 });
 
 // $(document).ready(function() {
@@ -109,21 +118,28 @@ $(document).ready(function() {
 //     //     }         
 //     // }
 //     // ); 
+// // });
+// $(document).ready(function() {
+//     window.onresize = window.onload = function() {
+//         console.log(4);
+//         var article = $('#article-text');
+//         var content = $('#content-block');
+//         contentWidth = $('#content-block')[0].getBoundingClientRect().width;
+//         windowW = parseInt($(window).width(), 10);  
+//         windowH = parseInt($(window).height(), 10);
+//         console.log(windowW);
+//         // var content = $('#content-block');
+//         content[0].style.transition= 'transform  1s ease-in-out';
+//         content[0].style.transform = `translateX(0)`;
+//         article[0].style.transition= 'transform 0.6s ease-in-out';
+//         article[0].style.transform = `translateX(0)`;
+//         content.addClass('folded');
+//     }
 // });
-window.onresize = window.onload = function() {
-        // article = $('#article-text');
-        // content = $('#content-block');
-        contentWidth = $('#content-block')[0].getBoundingClientRect().width;
-        windowW = parseInt($(window).width(), 10);  
-        windowH = parseInt($(window).height(), 10);
-        console.log(windowW);
-        // var content = $('#content-block');
-        content[0].style.transition= 'transform  1s ease-in-out';
-        content[0].style.transform = `translateX(0)`;
-        article[0].style.transition= 'transform 0.6s ease-in-out';
-        article[0].style.transform = `translateX(0)`;
-        content.addClass('folded');
-}
+
+// $(document).ready(function() {
+   
+// });
 
 // $(document).ready(function() {
 //     windowW = parseInt($(window).width(), 10);  

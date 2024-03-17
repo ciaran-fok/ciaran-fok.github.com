@@ -48,6 +48,38 @@ $(document).ready(function() {
                 }
                 
             }
+        var unfoldBtn = $('#unfold-button');
+        var foldBtn = $('#fold-button');    
+        var article = $('#article-text');
+        var content = $('#content-block');
+        var contentWidth = $('#content-block')[0].getBoundingClientRect().width;
+        var windowW = parseInt($(window).width(), 10);  
+        var windowH = parseInt($(window).height(), 10);
+        
+        console.log("Window width:", windowW);
+        console.log("Content width:", contentWidth);
+        
+        content[0].style.transition = 'transform 1s ease-in-out';
+        content[0].style.transform = 'translateX(0)';
+        article[0].style.transition = 'transform 0.6s ease-in-out';
+        article[0].style.transform = 'translateX(0)';
+        unfoldBtn.fadeIn();
+        foldBtn.fadeOut();
+        content.addClass('folded');
     }
+
+    // window.onload = function() {
+    //     console.log("Window loaded");
+    //     initTransformations();
+    // };
+
+    // $(window).onresize = function() {
+    //     console.log("Window resized");
+    //     initTransformations();
+    // };
+
+    // function initTransformations() {
+        
+    // }
 
 });

@@ -172,6 +172,7 @@ body::-webkit-scrollbar {
 
 body {
     overflow-x: hidden;
+    overscroll-behavior-x: hidden;
 }
 
 .callout {
@@ -323,6 +324,10 @@ body {
     ol >  ol > ol > li {margin-top:0;font-size: 13px;}
 }
 
+@media screen and (min-width:576px) and (max-width: 767px) and (orientation: portrait) {
+
+}
+
 /* Smartphones to tablets sm*/
 @media screen and (min-width:576px) and (max-width: 767px) {
     #article-container { width: 100vw; }
@@ -447,9 +452,9 @@ body {
     #content-block {
         width: 25vw;
     }
-    #content-block{
+    /* #content-block{
         transform: translateX(-26vw);
-    }
+    } */
 
     ol > li { margin-top: 2px; font-size: 16px;}
     ol >  ol > li { margin-top:0; font-size: 14px;}

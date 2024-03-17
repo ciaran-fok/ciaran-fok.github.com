@@ -46,7 +46,7 @@ $(document).ready(function() {
             // content.animate({width: 0}, 1000).addClass('folded');
             content[0].style.transition= 'transform  0.5s ease-in-out';
             content[0].style.transform = `translateX(0)`;
-            if(windowW >= 992 && windowW <1200) {
+            if(windowW >= 992) {
                 article[0].style.transition= 'transform 0.6s ease-in-out';
                 article[0].style.transform = `translateX(0)`;
             }

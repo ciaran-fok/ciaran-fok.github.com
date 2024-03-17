@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <script src="js/lunr.js"></script>
+    <!-- <script src="js/test.js"></script> -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.1/marked.min.js" integrity="sha512-pSeTnZAQF/RHxb0ysMoYQI/BRZsa5XuklcrgFfU3YZIdnD3LvkkqzrIeHxzFi6gKtI8Cpq2DEWdZjMTcNVhUYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div id="markdown-content"></div>
+    <div>
+        <!-- Markdown content goes here -->
+        <p>Write your name below:</p>
+        <input type="text" id="textInput" placeholder="Type something and press Enter">
+        <div id="output"></div>
+
+      </div>
+
+
+      <script>
+      
+        // Convert Markdown to HTML
+
+        function display () {
+
+        }
+
+        function search () {
+            return 
+        }
+
+        function mySearch (toSearch) {
+            fetch('all_blogs.json').then(function (response) {
+	        // The API call was successful!
+            return response.json();
+            }).then(function (data) {
+            // This is the JSON from our response
+            // console.log(data);
+            var index = data["all_blogs"]; 
+
+            var idx = lunr(function () {
+                this.ref('id')
+                this.field('txt')
+                this.field('tags')
+
+
+                index.forEach(function (doc) {
+                this.add(doc)
+                }, this)
+            })
+
+            console.log(idx.search(toSearch))
+            // index.forEach(myFunction);
+            console.log(index)
+            console.log(idx)
+        }).catch(function (err) {
+            // There was an error
+            console.warn('Something went wrong.', err);
+        });
+        }
+        
+
+        const inputField = document.getElementById('textInput');
+        const outputDiv = document.getElementById('output');
+
+        // Function to handle key press event
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                const value = event.target.value;
+                outputDiv.textContent = value;
+                // Clear input field after pressing Enter
+                inputField.value = '';
+                mySearch (value);
+            }
+        }
+
+        function handleInput(event) {
+            const value = event.target.value;
+            outputDiv.textContent = value;
+        }
+
+        // Attach key press event listener to the input field
+        inputField.addEventListener('keypress', handleKeyPress);
+        // inputField.addEventListener('input', handleInput);
+        
+        fetch('blog/1/This_Is_A_Title.md').then(function (response) {
+	        // The API call was successful!
+            return response.text();
+            }).then(function (data) {
+                // This is the JSON from our response
+                console.log(data);
+                // pre
+                var htmlText = marked.parse(data);
+                // post
+      
+            // Update the content of the div with id "markdown-content"
+            document.getElementById('markdown-content').innerHTML = htmlText;
+            })
+
+        markdownText = `#### Heading 1`
+        
+
+        // const sample = require('all_blogs.json');
+        // console.log(sample);
+      </script>
+</html>

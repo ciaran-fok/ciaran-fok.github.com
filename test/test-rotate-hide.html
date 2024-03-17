@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving Block</title>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+}
+
+#moving-block {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffd966;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="moving-block">Moving Block</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $(window).on('scroll', function() {
+        var viewportHeight = $(window).height();
+        var documentHeight = $(document).height();
+        var scrollTop = $(window).scrollTop();
+        var movingBlockHeight = $('#moving-block').outerHeight();
+        
+        // Calculate the maximum top position of the moving block
+        var maxTopPosition = documentHeight - viewportHeight;
+        
+        // Calculate the top position of the moving block
+        var topPosition = Math.min(maxTopPosition, scrollTop + viewportHeight - movingBlockHeight);
+        
+        // Update the top position of the moving block
+        $('#moving-block').css('top', topPosition);
+    });
+});
+
+</script>
+</body>
+</html>

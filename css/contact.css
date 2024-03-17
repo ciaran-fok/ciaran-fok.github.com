@@ -1,5 +1,11 @@
 .container {
-    margin-top: 200px;
+    margin-top: 180px;
+}
+
+#thanks {
+    color : var(--my-text-light);
+    font-size: 18px;
+    padding: 20px 0;
 }
 
 #subject{
@@ -28,6 +34,25 @@
     text-align: end;
 }
 
+#techornot label{
+    color:rgb(223, 223, 223);
+}
+#techornot p{
+    color:rgb(223, 223, 223);
+}
+
+#quick-note {
+    color:rgb(223, 223, 223);
+    margin: 10px 0;
+    padding: 6px 6px 6px 8px;
+    background-color: #ffd96621;
+    border-left-width: 2px;
+    border-left-color: #ffd966;
+    border-left-style: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#subject{color: #252525;}
 
 textarea {
     padding: 5px;
@@ -37,6 +62,8 @@ textarea {
     border: none;
     border-radius: 4px;
     max-width: 100%;
+    color: #252525;
+    
 }
 
 textarea:focus {
@@ -74,6 +101,46 @@ textarea:invalid {
     }
 }
 
+#submit_form:active {
+    transform: translateY(-0.5px);
+    box-shadow: 0 0 4px 2px #ffd9663c;
+}
+
 #notice-again {
     text-align: center;
+}
+
+/* Boot Strap Template */
+/* Smartphones xs*/
+@media screen and (max-width: 576px){
+    .container {
+        padding: 0 7%;
+    }
+}
+
+/* Smartphones to tablets sm*/
+@media screen and (min-width:576px) and (max-width: 768px) {
+
+}
+
+/* Portrait tablets md*/
+@media screen and (min-width:768px) and (max-width: 992px) {
+
+}
+
+/* Default lg*/
+@media screen and (min-width:992px) and (max-width: 1200px) {
+
+}
+
+/* Large display el*/
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+
+}
+
+@media screen and (min-width: 1400px) {
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

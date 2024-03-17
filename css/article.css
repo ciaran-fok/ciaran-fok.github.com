@@ -4,16 +4,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 #article-title {
     position: relative;
+
     overflow: hidden;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-/* body {
-    overflow-x: hidden;
-} */
 p {
     margin: 0; padding: 0;
     color:#fffcf4;
@@ -21,16 +15,6 @@ p {
     font-weight: 200;
     font-size: 16px;
 }
-
-#article-container {
-    /* display: flex; */
-    /* justify-content:center; */
-    position: relative;
-    /* background-color: brown; */
-    width: 100vw;
-
-}
-
 
 .image-text-block {
     position: relative;
@@ -60,34 +44,55 @@ p {
 }
 
 
-#article-body {
-    /* padding: 3% 0; */
-    /* display: inline-block;  */
+/* * * * * * * * * * * * * */
+
+
+/* #article-body {
     margin-top: 40px;
     margin-bottom: 35px;
     margin-left: 5%;
     margin-right: 5%;
     height: auto;
     width: 90%;;
-    display: flex;
-    justify-content: flex-start;
-    /* padding: 10px; */
-    /* background-color: rgba(94, 94, 94, 0.178);s */
-    /* background-color: brown; */
-}
+} */
 
-#atricle-content {
-    position: relative;
-    /* background-color: rgba(94, 94, 94, 0.102); */
-    height: 100%;   
+#content {
+    position: absolute;
+    width: 30;
+    top:0;
+    right: 0;
+    height: 2000px;
+    width: 300px;
+    background-color: rgba(255, 0, 0, 0.102);
+    z-index: 980;
 } 
+
+#content-content {
+    position:-webkit-sticky;
+    position: sticky;
+    height: 200px;
+    background-color: black;
+    top:30px;
+    bottom: 100px;
+}
 
 
 #content-table {
+    margin-top: 80px;
     background-color: #ffde7cea;
-    position: absolute;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
     right: 2%;
     border-radius: 10px;
+    top: 70px;
+    float: right;
+    height: 80px;
+    width: 80px;
+    display: block;
+
+    z-index: 990;
+    /* transition: top 0.000001s ease-in-out; */
+    
 }
 
 .img-container {
@@ -130,7 +135,6 @@ p {
         border-radius: 0;
         width: 100vw;
         height: 100vh;
-        top: 800px;
         right: 0;
     }
 }
@@ -145,8 +149,7 @@ p {
     } 
     #content-table {
         width: 270px;
-        height: 500px;
-        top: 800px;
+        height: 80vh;
     }
 }
 
@@ -160,8 +163,7 @@ p {
     } 
     #content-table {
         width: 270px;
-        height: 500px;
-        top: 800px;
+        height: 80vh;
     }
 
 }
@@ -176,8 +178,7 @@ p {
     } 
     #content-table {
         width: 270px;
-        height: 500px;
-        top: 800px;
+        height: 80vh;
     }
 }
 
@@ -191,8 +192,7 @@ p {
     } 
     #content-table {
         width: 28%;
-        height: 500px;
-        top: 800px;
+        height: 80vh;
     }
 }
 
@@ -206,8 +206,7 @@ p {
     } 
     #content-table {
         width: 28%;
-        height: 500px;
-        top: 800px;
+        height: 80vh;
     }
 }
 

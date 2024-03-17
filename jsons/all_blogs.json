@@ -1,0 +1,28 @@
+{
+    "all_blogs": [
+        {
+            "id": 0,
+            "title": "This Is A Title",
+            "author": "Ciaran Fok",
+            "date": "March 17, 2024",
+            "summary": "Testing",
+            "tags": ["test", "stephen"],
+            "series": "",
+            "cover": "",
+            "txt": "“I immediately knew Liza was the one,” O’Brien told me earlier. “I couldn’t say, Oh no, I’m not ready — I need to be with a few drug-addicted super-models with rage issues. It’s my nature to be the opposite of a self-destructive person: something inside of me usually makes me do the right thing.” This applies to the show as well. Unlike Letterman and Carson, O’Brien doesn’t seem to have a dark side. His humor is not mean — he’d rather laugh with the audience than at them. And unlike Stewart, he’s not on TV to educate through mockery. It’s impossible, for instance, to imagine O’Brien sparring with someone like Jim Cramer, the CNBC money guru, as Stewart recently did. O’Brien is too respectful to be angry; like Leno, he works hard to be polite.",
+            "md_file": "blog/0/This_Is_A_Title.md"
+        },
+        {
+            "id": 1,
+            "title": "This Is Another Title",
+            "author": "Noam Fok",
+            "date": "March 16, 2024",
+            "summary": "Testing Again",
+            "tags": ["test", "chomsky"],
+            "series": "",
+            "cover": "",
+            "txt": "Ideas were starting to take shape, too, many of them inspired by the back lot itself. “Jaws” was a huge hit for Universal, and one writer suggested that Bruce, the mechanical shark, could occasionally drop by the show. “In our mind, he sounds like Paul Lynde,” O’Brien explained. ",
+            "md_file": "blog/1/This_Is_Another_Title.md"
+        }
+    ]
+}

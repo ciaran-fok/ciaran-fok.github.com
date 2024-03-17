@@ -28,7 +28,7 @@
                 <img id="logo-ellipse" src="img/ellipse.png" alt="logo background">
                 <img id="logo-bear" src="img/logo_bear.png" alt="logo bear">    
             </a>
-            <div id="banner" class="d-none d-sm-block">
+            <div id="banner" class="d-none d-md-block banner">
                 <div id="button-holder">
                     <a class="banner-button left-most" href="about.html">About</a>
                     <a class="banner-button" href="contact.html">Contact</a>
@@ -36,28 +36,45 @@
                     <a id="browse" class="banner-button" href="search.html">Browse <img class="banner-logo" src="img/icons8-search-100.png"></a>
                 </div>
             </div>
-            <div id="banner-tiny" class="d-block d-sm-none">
-                <img id="banner-logo" src="img/banner-logo.png">
+            <div id="banner-tiny" class="d-block d-md-none">
+                <img id="banner-logo" class="banner-folder" src="img/banner-logo.png">
+                <img id="banner-close" class="banner-folder" src="img/banner-close.png" style="display: none;">
+            </div>
+            <div id="banner-open" class="banner"> 
+                <div id="button-holder-open">
+                    <hr class="banner-hr">
+                    <a class="banner-button left-most" href="about.html">About</a>
+                    <hr class="banner-hr">
+                    <a class="banner-button" href="contact.html">Contact</a>
+                    <hr class="banner-hr">
+                    <a class="banner-button" href="friends.html">Friends</a>
+                    <hr class="banner-hr">
+                    <a id="browse" class="banner-button" href="search.html">Browse <img class="banner-logo" src="img/icons8-search-100.png"></a>
+                </div>
             </div>
         </header>
         <div class="container">
-            <div class="row">
+            <!-- <div class="row"> -->
                 <div id="thanks">
-                    Thank you for reaching out to us. Please leave your message below. 
+                    Thank you for reaching out to us! Please leave your message below:
+                    
                 </div>
-                <div id=""><input type="checkbox" id="scales" name="scales" checked /> 
-                    <label for="scales">Check this box if you are reporting a technical issue. (Tech related stuff will go straight to Mur). 
-                </label> </div>
-                <div id="quick-note">
-                    A Quick Note if you are reporting a technical glitch: 
-                    Please be as specific as possible. Please include:
-                    - What kind of device (e.g. laptop, phone, pad) you were you using when the bug happened? 
-                    - Whicth browser (Chrome, Safari, Firefox, etc.) you were using when the glitch happened? 
-                    - and include a detailed description of the problem.
-                    e.g. I am using a iphone12S, to read the article "I don't know", and I noticed the green callout box overflowed the screen.
-                     I'd like to apologize in advance for the inconvenience, and thank you so much for your cooperation, cause if I cannot recreate the bug, I cannot fox it. -- Mur
-                    Use Chinese if you like, we all speak Chinese. This site is in English mainly because 1. We wish this can be read by more people around the world 
-                    2. Chinese fonts are annoying 3. No parsing needed.
+                <div id="techornot">
+                    <input type="checkbox" id="checkbox" name="scales" unchecked /> 
+                    <label for="checkbox">Reporting Bug / Display Error </label> 
+                    <p>Check this box if you are reporting a technical issue. (Cause tech related stuff will go straight to Mur). </p>
+                <!-- </div> -->
+                    
+                </div>
+                <div id="quick-note" style="display: none;">
+                    A Quick Note if you are reporting a technical issue: <br>
+                    Please be as specific as possible. Please include:<br>
+                    - What kind of device (e.g. laptop, cellphone, iPad Mini) were you using when you noticed the bug?<br> 
+                    - Which browser (e.g. Chrome, Safari, Firefox) were you using? <br> 
+                    - and include a detailed description of the problem.<br>
+                    e.g. I am using my iPhone5 (safari) to read the article "About The Site", and I noticed the green callout box overflowed the screen. <br>
+                    
+                    Mur would like to apologize in advance for your inconvenience and thank you so much for your help!
                 </div>
             </div>
             <div class="row">
@@ -65,13 +82,13 @@
                     <form action="https://postmail.invotes.com/send" method="post" id="email_form">
 
                         <input id="subject" type="text" name="subject" placeholder="Subject" />
-                        <textarea name="text" placeholder="Message"></textarea>
-                        <input type="hidden" name="access_token" value="l670q5wdm1694u5a2665eels" />
+                        <textarea name="text" placeholder="Your message"></textarea>
+                        <input id="target" type="hidden" name="access_token" value="l670q5wdm1694u5a2665eels" />
                          <!-- return urls can be fully qualified -OR-
                             start with / for root relative -OR-
                             start with . for url relative --> 
-                        <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
-                        <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+                        <!-- <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" /> -->
+                        <!-- <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" /> -->
                         <input id="submit_form" type="submit" value="Send" />
                         <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
                         
@@ -79,7 +96,7 @@
                 </div>
                 <p id="notice-again"> 
                     The emailing function is powered by <a class="link" href="https://postmail.invotes.com" target="_blank">PostMail</a>. 
-                    If the service failed, you can find us on <a class="link" href="https://github.com/ciaran-fok">our github page</a>.
+                    <br> If the service failed, you can still find us on <a class="link" href="https://github.com/ciaran-fok">our&nbsp;github&nbsp;page</a>.
                 </p>
             </div>
         </div>
@@ -98,4 +115,7 @@
             }, 1);
         });
     </script> 
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/contact.js"></script>
 </html>

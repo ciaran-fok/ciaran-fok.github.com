@@ -33,7 +33,7 @@
                 <img class="headshot-img" id="ring1" src="img/ring1.png">
                 <img class="headshot-img" id="ring2" src="img/ring2.png">
             </a>            
-            <div id="banner" class="d-none d-sm-block">
+            <div id="banner" class="d-none d-md-block banner">
                 <div id="button-holder">
                     <a class="banner-button left-most" href="about.html">About</a>
                     <a class="banner-button" href="contact.html">Contact</a>
@@ -41,8 +41,21 @@
                     <a id="browse" class="banner-button" href="search.html">Browse <img class="banner-logo" src="img/icons8-search-100.png"></a>
                 </div>
             </div>
-            <div id="banner-tiny" class="d-block d-sm-none">
-                <img id="banner-logo" src="img/banner-logo.png">
+            <div id="banner-tiny" class="d-block d-md-none">
+                <img id="banner-logo" class="banner-folder" src="img/banner-logo.png">
+                <img id="banner-close" class="banner-folder" src="img/banner-close.png" style="display: none;">
+            </div>
+            <div id="banner-open" class="banner"> 
+                <div id="button-holder-open">
+                    <hr class="banner-hr">
+                    <a class="banner-button left-most" href="about.html">About</a>
+                    <hr class="banner-hr">
+                    <a class="banner-button" href="contact.html">Contact</a>
+                    <hr class="banner-hr">
+                    <a class="banner-button" href="friends.html">Friends</a>
+                    <hr class="banner-hr">
+                    <a id="browse" class="banner-button" href="search.html">Browse <img class="banner-logo" src="img/icons8-search-100.png"></a>
+                </div>
             </div>
         </header> 
         <div id="front-page-text">
@@ -207,4 +220,6 @@
     </footer>
     <script src="js/index.js"></script>
     <script src="js/rotator.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/banner.js"></script>
 </html>

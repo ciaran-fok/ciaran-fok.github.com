@@ -60,7 +60,7 @@ $(document).ready(function() {
         console.log("Content width:", contentWidth);
         
         content[0].style.transition = 'transform 1s ease-in-out';
-        content[0].style.transform = 'translateX(0)';
+        content[0].style.transform = 'translateY(0)';
         article[0].style.transition = 'transform 0.6s ease-in-out';
         article[0].style.transform = 'translateX(0)';
         unfoldBtn.fadeIn();

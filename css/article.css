@@ -277,20 +277,26 @@ body {
   }
 /* Smartphones xs*/
 @media screen and (max-width: 575px) and (orientation: portrait){
-    #article-container { width: 100; }
+    #article-container { width: 100; position: absolute;}
     #article-title { height: 65vh; max-height: 480px;}
     .ITB-text { padding: 3% 5%; }
 
     #overflow-container {
-        width: 180vw;
+        width: 100vw;
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: 0; */
     }
     #article-text {width: 100vw;}
     #content-block {
         width: 80vw;
+        height: 65vh;
+        top:0;
+        margin-top: 0;
     }
-    /* #content-block{
-        transform: translateX(-85vw);
-    } */
+    #content-block{
+        /* transform: translateY(65vh); */
+    }
 
     ol > li { margin-top: 2px; font-size: 18px;}
     ol >  ol > li { margin-top:0; font-size: 16px;}

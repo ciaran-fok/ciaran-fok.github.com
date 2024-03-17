@@ -27,7 +27,7 @@ $(document).ready(function() {
             content[0].style.transition= 'transform 0.6s ease-in-out';
             content[0].style.transform = `translateX(-${distance}px)`;
             console.log(windowW)
-            if((windowW >= 992) && (windowW <1200)) {
+            if((windowW >= 992)) {
                 console.log("3");
                 // article[0].hide();
                 article[0].style.transition= 'transform 0.6s ease-in-out';

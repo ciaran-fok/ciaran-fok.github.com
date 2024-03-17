@@ -94,6 +94,11 @@ textarea:invalid {
     font-weight: bold;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
 @media (hover: hover) {
     #submit_form:hover {
         transform: translateY(-0.5px);

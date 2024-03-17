@@ -14,21 +14,29 @@
         <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Twitter Bootstrap -->
         <link rel="stylesheet" href="css/override.css"> 
         <link rel="stylesheet" href="css/general.css"> 
-        <!-- <link rel="stylesheet" href="css/index.css">  -->
-        <link rel="stylesheet" href="css/search.css">
-        <!-- <link rel="stylesheet" href="css/birthday.css"> -->
-        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <link rel="stylesheet" href="css/article.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb" rel="stylesheet"> -->
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+        <link rel="stylesheet" href="css/default.min.css">
+
+        <!-- <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/> -->
+        <link rel="stylesheet" href="css/waline-override.css"> 
     </head>
-    <header>
         <div id="toload">
         </div>
+    <header>
         <a id="logo-container" href="index.html">
             <img id="logo-ellipse" src="img/ellipse.png" alt="logo background">
-            <img id="logo-bear" src="img/logo_bear.png" alt="logo bear">
-        </a>         
+            <img id="logo-bear" src="img/logo_bear.png" alt="logo bear">    
+        </a>          
         <div id="banner" class="d-none d-md-block banner">
             <div id="button-holder">
                 <a class="banner-button left-most" href="about.html">About</a>
@@ -41,7 +49,7 @@
             <img id="banner-logo" class="banner-folder" src="img/banner-logo.png">
             <img id="banner-close" class="banner-folder" src="img/banner-close.png" style="display: none;">
         </div>
-        <div id="banner-open" class="banner"  style="display: none;"> 
+        <div id="banner-open" class="banner"> 
             <div id="button-holder-open">
                 <hr class="banner-hr">
                 <a class="banner-button left-most" href="about.html">About</a>
@@ -53,20 +61,19 @@
                 <a id="browse" class="banner-button" href="search.html">Browse <img class="banner-logo" src="img/icons8-search-100.png"></a>
             </div>
         </div>
-    </header>
+    </header> 
     <body>
-        <div id="result-display-area">
-            <div class="article-unit">
-                <div class="image-text-block">
-                    <div class="ITB-image-mask"></div>
-                    <img class="ITB-img" src="img/placeholder.jpg">
-                </div>
+       <div id="article-title">
+            <div class="image-text-block">
+                <div class="ITB-image-mask"></div>
+                <img class="ITB-img top" src="img/placeholder2.jpg">
                 <div class="ITB-text">
                     <div class="tag-holder">
                         <a class="tag"> <div class="tag-content"> placeholder </div> </a>
+                        <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
                     </div>
-                    <div class="title"> This is a title</div>
-                    <div class="summary">Hello my name is Ciaran, I am currently a stident.
+                    <div class="title"> This is A title</div>
+                    <div class="summary"> Hello my name is Ciaran, I am currently a stident.
                         Hello my name is Ciaran, I am currently a stident.
                         Hello my name is Ciaran, I am currently a stident.
                         Hello my name is Ciaran, I am currently a stident. hiiii
@@ -78,48 +85,43 @@
                 </div>
             </div>
         </div>
-        <div id="search-bundle">
-            <div id="search-fold-button" class="search-button d-sm-block d-md-none">
-                <!-- <img id="fold-button" src="img/right-y.png"> -->
-                <img id="unfold-button" src="img/left-y.png">
-            </div>
-            <div id="search">
-                <div id="recent-tags">
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                    <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
-                    <a class="tag"> <div class="tag-content"> comedy </div> </a>
-                    <a class="tag"> <div class="tag-content"> book </div> </a>
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                    <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
-                    <a class="tag"> <div class="tag-content"> comedy </div> </a>
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                    <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
-                    <a class="tag"> <div class="tag-content"> comedy </div> </a>
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                    <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
-                    <a class="tag"> <div class="tag-content"> comedy </div> </a>
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                    <a class="tag"> <div class="tag-content"> tig notaro </div> </a>
-                    <a class="tag"> <div class="tag-content"> comedy </div> </a>
-                    <a class="tag"> <div class="tag-content"> placeholder </div> </a>
-                </div>
-                <div id="selected-tags"></div>
-            </div>
-        </div>           
+        <div id="content">
+            hello
+            
+            Hello
+            <p>Hello</p>
+            <p>Hello</p>
+            <p>Hello</p>
+            <p>Hello</p>
+            <p>Hello</p>
+            <p>Hello</p>
+            <p>Hello</p>
+            <p>Hello</p>
+            <p>Hello</p>
+            <p>Hello</p>
+            <div id="content-content"> Test </div>
 
+        </div>
+        <div id="article">
+        </div>
+        <div id="comment"></div>
     </body>
-    <footer>
-        Copyright &copy; Ciaran & Noam Fok
-    </footer>
-    <!-- <script src="js/search.js"></script> -->
-    
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/fold-search.js"></script>
-    <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+    <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
+        init({
+        el: '#waline',
+        serverURL: 'https://your-domain.vercel.app',
+        lang: 'en',
+        });
+    </script>
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/content.js"></script>
 </html>

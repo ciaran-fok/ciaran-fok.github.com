@@ -12,7 +12,7 @@
  
 #article-body {
     position: relative;
-    width: 20vw;
+    width: 1vw;
     /* height: 700px; */
     /* background-color: yellow; */
     overflow: visible;
@@ -65,7 +65,7 @@
     margin-top: 40px;
     margin-right: 20px;
     top: 15vh;
-    /* right: 2%; */
+    right: -270px;
     /* background-color: rgb(160, 55, 55); */
     z-index: 800;
     border-radius: 10px;
@@ -241,3 +241,101 @@ ol >  ol > ol > li {
   body::-webkit-scrollbar {
     display: none;
   }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Smartphones xs*/
+@media screen and (max-width: 576px) and (orientation: portrait){
+    #article-container { width: 100; }
+    #article-title { height: 65vh; max-height: 480px;}
+    .ITB-text { padding: 3% 5%; }
+    #content-table {
+        /* position: fixed; */
+        border-radius: 0;
+        width: 90vw;
+        height: 100vh;
+        right: 0;
+    }
+}
+
+/* Smartphones xs*/
+@media screen and (max-width: 576px) and (orientation: landscape){
+    #article-container { width: 100vw; }
+    #article-title { height: 100vh; }
+    #atricle-content {
+        width: 100%;
+        padding: 20px 30px;   
+    } 
+    #content-table {
+        width: 270px;
+        height: 80vh;
+    }
+}
+
+/* Smartphones to tablets sm*/
+@media screen and (min-width:576px) and (max-width: 768px) {
+    #article-container { width: 100vw; }
+    #article-title { height: 100vh; }
+    #atricle-content {
+        width: 100%;
+        padding: 20px 30px;   
+    } 
+    #content-table {
+        width: 270px;
+        height: 80vh;
+    }
+
+}
+
+/* Portrait tablets md*/
+@media screen and (min-width:768px) and (max-width: 992px) {
+    #article-container { width: 100vw; }
+    #article-title { height: 100vh; max-height: 800px;}
+    #atricle-content {
+        width: 100%;
+        padding: 20px 30px;   
+    } 
+    #content-table {
+        width: 270px;
+        height: 80vh;
+    }
+}
+
+/* Default lg*/
+@media screen and (min-width:992px) and (max-width: 1200px) {
+    #article-container { width: 100vw; max-width: 1200px; }
+    #article-title {  height: 100vh; max-height: 700px;}
+    #atricle-content {
+        width:70%;
+        padding: 20px 30px;   
+    } 
+    #content-table {
+        width: 28%;
+        height: 80vh;
+    }
+}
+
+/* Large display el*/
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #article-container { width: 1200px; margin: 0 auto;}
+    #article-title {height: 700px;}
+    #atricle-content {
+        width:70%;
+        padding: 20px 30px;   
+    } 
+    #content-table {
+        width: 28%;
+        height: 80vh;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #article-container { width: 1200px; margin: 0 auto;}
+    #article-title { height: 700px;}
+    #atricle-content {
+        width:80%;
+        padding: 20px 30px;   
+    } 
+}

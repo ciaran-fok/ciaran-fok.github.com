@@ -370,6 +370,7 @@ body {
     #article-text {width: 90vw;  margin-left: 5vw;}
     #content-block {
         width: 35vw;
+        height: 60vh;
     }
     /* #content-block{
         transform: translateX(-37vw);

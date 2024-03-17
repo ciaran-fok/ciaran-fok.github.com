@@ -56,7 +56,7 @@
     </header>
     <body>
         <div id="result-display-area">
-            <div class="article-unit">
+            <div class="article-unit" id="jump" data-argument="example_argument">
                 <div class="image-text-block">
                     <div class="ITB-image-mask"></div>
                     <img class="ITB-img" src="img/placeholder.jpg">
@@ -121,5 +121,13 @@
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/fold-search.js"></script>
     <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
-
+    <!-- <script>
+        document.getElementById('jump').addEventListener('click', function() {
+            // Get the argument from the button's data-attribute
+            var argument = this.getAttribute('data-argument');
+            
+            // Navigate to a different page with the argument in the query string
+            window.location.href = 'article.html?argument=' + encodeURIComponent(argument);
+        });
+    </script> -->
 </html>

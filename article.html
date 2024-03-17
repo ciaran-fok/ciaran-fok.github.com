@@ -63,6 +63,7 @@
     </header>
 
     <body>
+        <div id="argumentOutput"></div>
         <div id="overflow-container">
             <div id="article-title">
                 <div class="image-text-block">
@@ -206,5 +207,44 @@ print("hello world!")
     <!-- and it's easy to individually load additional languages -->
     <script src="js/languages/python.min.js"></script>
     <script>hljs.highlightAll();</script>
-  
+    <!-- <script>
+        function getArgumentFromQueryString() {
+            var queryString = window.location.search;
+            console.log(queryString)
+            // Check if the query string exists and is not empty
+            if (queryString) {
+                // Remove the leading '?' character
+                queryString = queryString.substring(1);
+                
+                // Split the query string into key-value pairs
+                var queryParams = queryString.split('&');
+                
+                // Iterate through the key-value pairs
+                for (var i = 0; i < queryParams.length; i++) {
+                    // Split each key-value pair into key and value
+                    var pair = queryParams[i].split('=');
+                    
+                    // Check if the key matches 'argument'
+                    if (pair[0] === 'argument') {
+                        // Return the value of the 'argument' parameter
+                        return decodeURIComponent(pair[1]);
+                    }
+                }
+            }
+        
+            // If 'argument' parameter is not found or if query string is empty, return null
+            return null;
+        }
+
+        // Retrieve the argument from the query string
+        var argument = getArgumentFromQueryString();
+
+        // Output the argument to the console or use it as needed
+        console.log('Argument:', argument);
+
+        // Example usage: Update HTML content with the retrieved argument
+        if (argument) {
+            document.getElementById('argumentOutput').textContent = 'Argument: ' + argument;
+        }
+    </script> -->
 </html>

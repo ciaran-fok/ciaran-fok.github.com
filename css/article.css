@@ -166,9 +166,10 @@ ol {
     right: 3px;
 }
 
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
     display: none;
     overflow-x: hidden;
+
 }
 
 .callout {

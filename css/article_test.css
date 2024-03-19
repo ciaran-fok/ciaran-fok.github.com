@@ -447,14 +447,23 @@ pre small {
     }
     #article-text {
         width: 75vw; 
-        margin-left: 12.5vw;}
-    #content-block {
-        width: 25vw;
-        margin-top: 500px;
+        margin-left: 12.5vw;
     }
-    /* #content-block{
-        transform: translateX(-26vw);
-    } */
+    #content-holder {
+        width: 1vw; 
+    }
+    /* this thing is not going to shrink */
+    #content-block-hidder {
+        width: 310px; 
+        height: 75vh;
+    }
+        
+    #content-block {
+        
+        /* left: 310px; */
+        padding: 20px 10px;
+        width: 270px;
+    }
 
     ol > li { margin-top: 2px; font-size: 16px;}
     ol >  ol > li { margin-top:0; font-size: 14px;}

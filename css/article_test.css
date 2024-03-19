@@ -1,0 +1,220 @@
+#article-title {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#content-holder {
+    margin-top: 40px;
+    overflow:visible;  
+    display: block; 
+    z-index: 990; 
+    float: right; 
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 15vh;
+    height: 75vh; 
+    max-height: 800px;
+    width: 20px; 
+    background-color: green;
+}
+/* this thing is not going to shrink */
+#content-block-hidder {
+    position: absolute; 
+    right: 0; 
+    top:0; 
+    background-color: aquamarine; 
+    width: 210px; 
+    height: 75vh;
+    overflow-x: hidden;
+    /* transform: translateX(-50%); */
+    
+}
+
+#content-block {
+    background-color: rgba(55, 55, 55, 0.95);
+    border-radius: 10px;
+    padding: 10%;
+    height: 100%;
+    width: 200px;
+    overflow-y: scroll;
+    transition: all 1s ease-in-out;
+    padding: 20px 10px;
+    border-color: #ffe1861c;
+    border-width: 1px;
+    border-style: solid;
+    filter: drop-shadow(0rem 0rem 0.02rem rgba(255, 235, 180, 0.1));
+}
+
+#content-block:hover {
+    transform: translateX(200px);
+}
+
+#content-content {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+ol { counter-reset: item }
+ol li{ display: block }
+ol li:before { content: counters(item, ".") " "; counter-increment: item }
+
+li {
+    color: #fff9e5d8;
+    /* color: rgba(0, 0, 0, 0.9); */
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    line-height: 1.5em;
+    /* font-weight: 600; */
+}
+
+
+ol {
+    padding-inline-start: 20px;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+    /* margin-right: 10px; */
+  }
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    /* margin-right: 10px; */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(26, 26, 26);
+    border-radius: 5px;
+    /* margin-right: 5px; */
+    padding-right:0px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    /* background: #fffcf3e0;  */
+    background: #fff4d4d7;
+    border-radius: 10px;
+  }
+
+
+#article-text {
+    margin-top: 40px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+
+    /* width: 100vw; */
+    width: 75vw; 
+    margin-left: 12.5vw;
+    padding: 0px 5%;
+    clear:none;
+    /* background-color: rgba(121, 121, 121, 0.066); */
+}
+
+#article-text p {
+    font-weight: 200;
+    /* color: rgb(209, 209, 209); */
+    /* font-family: "Lexend Deca",sans-serif; */
+}
+
+#article-color {
+    width: 100%;
+    padding: 6%;
+    background-color: rgba(121, 121, 121, 0.066);
+}
+
+pre {
+    position: relative;
+    margin: 10px 0;
+}
+
+pre small {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 11px;
+    height: 20px;
+    /* width: 20px; */
+    /* text-transform: capital */
+    font-weight: bold;
+    padding: 1px 5px 3px 5px;
+    border-bottom-left-radius: 3px;
+    color: white;
+}
+
+.callout {
+    border-left: #ffd966;
+    border-left-width: 3px;
+    border-left-style: solid;
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #ffd96613;
+    border-radius: 1px;
+    font-size: 110%;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+}
+
+.quote hr {
+    background-color: #ffdf7f;
+    border-radius: 0.5px;
+    border: 0 none;
+    opacity: 0.8;
+    /* color: ; */
+    height: 1px;
+        /* color:#ffd966f7; */
+    margin: 6px 30%;
+}
+
+.quote p {
+    /* padding: 5px; */
+    color: #ffe7a0;
+    padding: 0 10%;
+}
+
+.img-division {
+    margin: 15px auto;
+}
+.img-container {
+    margin-left:auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+
+.caption {
+    margin-left:auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    position: relative;
+    font-size: 13px;
+    line-height: 17px;
+    color: grey;
+}
+.caption.active-caption {
+    width: 100%;
+}
+.img-container.active-container {
+    width: 100%;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.article-img-mask {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    background-color: rgba(24, 24, 24, 0.35);
+}
+.article-img-mask.active-mask {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    background-color: rgba(24, 24, 24, 0.0);
+}

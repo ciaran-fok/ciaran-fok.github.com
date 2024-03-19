@@ -16,7 +16,7 @@
     top: 15vh;
     height: 75vh; 
     max-height: 800px;
-    /* background-color: green; */
+    background-color: green;
 }
 
 /* this thing is not going to shrink */
@@ -25,6 +25,7 @@
     right: 0; 
     top:0; 
     overflow-x: hidden;
+    background-color: aquamarine;
 }
 
 #content-block {

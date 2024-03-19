@@ -442,13 +442,9 @@ pre small {
         width:70%;
         padding: 20px 30px;   
     } 
-    #overflow-container {
-        width: 125vw;
-    }
     #article-text {
         width: 75vw; 
-        margin-left: 12.5vw;
-    }
+        margin-left: 12.5vw;}
     #content-holder {
         width: 1vw; 
     }
@@ -459,7 +455,6 @@ pre small {
     }
         
     #content-block {
-        
         /* left: 310px; */
         padding: 20px 10px;
         width: 270px;
@@ -477,16 +472,23 @@ pre small {
         width:80%;
         padding: 20px 30px;   
     } 
-    #overflow-container {
-        width: 125vw;
+    #article-text {
+        width: 75vw; 
+        margin-left: 12.5vw;}
+    #content-holder {
+        width: 1vw; 
     }
-    #article-text {width: 75vw;margin-left: 12.5vw;}
+    /* this thing is not going to shrink */
+    #content-block-hidder {
+        width: 310px; 
+        height: 75vh;
+    }
+        
     #content-block {
-        width: 25vw;
+        /* left: 310px; */
+        padding: 20px 10px;
+        width: 270px;
     }
-    /* #content-block{
-        transform: translateX(-26vw);
-    } */
 
     ol > li { margin-top: 2px; font-size: 16px;}
     ol >  ol > li { margin-top:0; font-size: 14px;}

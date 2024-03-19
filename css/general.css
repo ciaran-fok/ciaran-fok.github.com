@@ -35,11 +35,11 @@ body {
 .banner {
     position: fixed;
     top: 0;
-    left: 100vw;
+    right:0;
     /* background-color: #FFD966; */
     overflow: hidden;
     z-index: 990;
-    transform: translateX(-450px);
+    /* transform: translateX(-450px); */
     filter: drop-shadow(-0.2rem 0.2rem 0.2rem rgba(42, 42, 42, 0.425));
 }
 

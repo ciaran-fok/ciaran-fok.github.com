@@ -48,7 +48,8 @@ $(document).ready(function() {
                 }
                 
             }
-        var unfoldBtn = $('#unfold-button');
+        // var unfoldBtn = $('#unfold-button');
+        var unfoldBtn = $('#table-of-content');
         var foldBtn = $('#fold-button');    
         var article = $('#article-text');
         var content = $('#content-block');
@@ -59,8 +60,17 @@ $(document).ready(function() {
         console.log("Window width:", windowW);
         console.log("Content width:", contentWidth);
         
-        content[0].style.transition = 'transform 1s ease-in-out';
-        content[0].style.transform = 'translateY(0)';
+        
+        
+        if((windowW <= 575) && (windowH > windowW)) {
+            content[0].style.transition= 'transform 0s ease-in-out';
+            content[0].style.transform = `translateX(90vw)`;
+        }
+        else {
+            content[0].style.transition = 'transform 0s ease-in-out';
+            content[0].style.transform = 'translateX(290px)';
+        }
+
         article[0].style.transition = 'transform 0.6s ease-in-out';
         article[0].style.transform = 'translateX(0)';
         unfoldBtn.fadeIn();

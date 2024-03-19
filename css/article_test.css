@@ -4,6 +4,7 @@
     height: 100vh;
 }
 
+
 #content-holder {
     margin-top: 40px;
     overflow:visible;  
@@ -15,44 +16,99 @@
     top: 15vh;
     height: 75vh; 
     max-height: 800px;
-    width: 20px; 
-    background-color: green;
+    /* background-color: green; */
 }
+
 /* this thing is not going to shrink */
 #content-block-hidder {
     position: absolute; 
     right: 0; 
     top:0; 
-    background-color: aquamarine; 
-    width: 210px; 
-    height: 75vh;
+    /* background-color: aquamarine;  */
     overflow-x: hidden;
-    /* transform: translateX(-50%); */
-    
 }
 
 #content-block {
     background-color: rgba(55, 55, 55, 0.95);
     border-radius: 10px;
-    padding: 10%;
     height: 100%;
-    width: 200px;
-    overflow-y: scroll;
-    transition: all 1s ease-in-out;
+    position: relative;
+    left: 20px;
+    overflow-x: visible;
+    transition: all 0.5s ease-in-out;
     padding: 20px 10px;
     border-color: #ffe1861c;
     border-width: 1px;
     border-style: solid;
     filter: drop-shadow(0rem 0rem 0.02rem rgba(255, 235, 180, 0.1));
+    z-index: 700;
 }
 
-#content-block:hover {
-    transform: translateX(200px);
-}
+
 
 #content-content {
     height: 100%;
     overflow-y: scroll;
+}
+
+#fold-unfold-button {
+    margin: auto 0;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 40px;
+    height: 200px;
+    transform: translateY(-50%);
+    /* display: flex; */
+    /* justify-content: center; */
+    /* background-color: red; */
+}
+
+#table-of-content {
+    writing-mode:vertical-lr;
+    text-orientation: mixed;
+    /* background-color: #ffd966; */
+    background-color: rgb(34, 34, 34);
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 2px;
+    color:#bba972;
+    height: 180px;
+    line-height: 18px;
+    width: 18px;
+    font-size: 13px;
+    /* left: -px; */
+    transform: rotate(180deg);  
+    z-index: 200;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#table-of-content:hover {
+    margin-left: 0px;
+}
+
+
+#fold-unfold-button img{
+    /* display: none; */
+    margin: auto 0;
+    position: absolute;
+    top: 78px;
+    width: 10px;
+    height: auto;
+    opacity: 0.15;
+    /* opacity: 0; */
+}
+
+
+
+#unfold-button {
+    left: 3px;
+    
+}
+
+#fold-button {
+    right: 3px;
 }
 
 ol { counter-reset: item }
@@ -217,4 +273,214 @@ pre small {
 .article-img-mask.active-mask {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
     background-color: rgba(24, 24, 24, 0.0);
+}
+
+
+/* Smartphones xs*/
+@media screen and (max-width: 575px) and (orientation: portrait){
+    #article-container { width: 100; position: absolute;}
+    #article-title { height: 65vh; max-height: 480px;}
+    .ITB-text { padding: 3% 5%; }
+
+    #article-text {width: 98vw; margin-left:1vw}
+    #content-holder {
+        width: 1vw; 
+        top: 10vh;
+        height: 80vh;
+    }
+    /* this thing is not going to shrink */
+    #content-block-hidder {
+        width: 100vw;
+        height: 80vh;
+    }
+        
+    #content-block {
+        left: 10vw;
+        padding: 20px 10px;
+        width: 85vw;
+    }
+    #fold-unfold-button {
+        left: -5vw;
+        width: 10vw;
+    }
+    
+
+    ol > li { margin-top: 2px; font-size: 18px;}
+    ol >  ol > li { margin-top:0; font-size: 16px;}
+    ol >  ol > ol > li {margin-top:0;font-size: 15px;}
+}
+
+
+
+
+/* Smartphones xs*/
+@media screen and (max-width: 575px) and (orientation: landscape){
+    #article-container { width: 100vw; }
+    #article-title { height: 100vh; }
+    #atricle-content {
+        width: 100%;
+        padding: 20px 30px;   
+    } 
+    #article-text {width: 98vw; margin-left:1vw}
+    #content-holder {
+        width: 1vw; 
+    }
+    /* this thing is not going to shrink */
+    #content-block-hidder {
+        width: 310px; 
+        height: 75vh;
+    }
+        
+    #content-block {
+        
+        /* left: 310px; */
+        padding: 20px 10px;
+        width: 270px;
+    }
+    ol > li { margin-top: 2px; font-size: 16px;}
+    ol >  ol > li { margin-top:0; font-size: 14px;}
+    ol >  ol > ol > li {margin-top:0;font-size: 13px;}
+}
+
+
+/* Smartphones to tablets sm*/
+@media screen and (min-width:576px) and (max-width: 767px) {
+    #article-container { width: 100vw; }
+    #article-title { height: 100vh; }
+    #atricle-content {
+        width: 100%;
+        padding: 20px 30px;   
+    } 
+
+    #article-text {width: 98vw; margin-left:1vw}
+    #content-holder {
+        width: 1vw; 
+    }
+    /* this thing is not going to shrink */
+    #content-block-hidder {
+        width: 310px; 
+        height: 75vh;
+    }
+        
+    #content-block {
+        
+        /* left: 310px; */
+        padding: 20px 10px;
+        width: 270px;
+    }
+    ol > li { margin-top: 2px; font-size: 16px;}
+    ol >  ol > li { margin-top:0; font-size: 14px;}
+    ol >  ol > ol > li {margin-top:0;font-size: 13px;}
+
+}
+
+/* Portrait tablets md*/
+@media screen and (min-width:768px) and (max-width: 992px) {
+    #article-container { width: 100vw; }
+    #article-title { height: 100vh; max-height: 800px;}
+    #atricle-content {
+        width: 100%;
+        padding: 20px 30px;   
+    } 
+    #article-text {width: 90vw;  margin-left: 5vw;}
+    #content-holder {
+        width: 1vw; 
+    }
+    /* this thing is not going to shrink */
+    #content-block-hidder {
+        width: 310px; 
+        height: 75vh;
+    }
+        
+    #content-block {
+        
+        /* left: 310px; */
+        padding: 20px 10px;
+        width: 270px;
+    }
+    ol > li { margin-top: 2px; font-size: 16px;}
+    ol >  ol > li { margin-top:0; font-size: 14px;}
+    ol >  ol > ol > li {margin-top:0;font-size: 13px;}
+}
+
+/* Default lg*/
+@media screen and (min-width:992px) and (max-width: 1199px) {
+    #article-container { width: 100vw; max-width: 1200px; }
+    #article-title {  height: 100vh; max-height: 700px;}
+    #atricle-content {
+        width:70%;
+        padding: 20px 30px;   
+    } 
+    #article-text {
+        width: 75vw; 
+        margin-left: 12.5vw;}
+    #content-holder {
+        width: 1vw; 
+    }
+    /* this thing is not going to shrink */
+    #content-block-hidder {
+        width: 310px; 
+        height: 75vh;
+    }
+        
+    #content-block {
+        
+        /* left: 310px; */
+        padding: 20px 10px;
+        width: 270px;
+    }
+
+    ol > li { margin-top: 2px; font-size: 16px;}
+    ol >  ol > li { margin-top:0; font-size: 14px;}
+    ol >  ol > ol > li {margin-top:0;font-size: 13px;}
+}
+
+/* Large display el*/
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    #article-container { width: 1200px; margin: 0 auto;}
+    #article-title {height: 700px;}
+    #atricle-content {
+        width:70%;
+        padding: 20px 30px;   
+    } 
+    #overflow-container {
+        width: 125vw;
+    }
+    #article-text {
+        width: 75vw; 
+        margin-left: 12.5vw;}
+    #content-block {
+        width: 25vw;
+        margin-top: 500px;
+    }
+    /* #content-block{
+        transform: translateX(-26vw);
+    } */
+
+    ol > li { margin-top: 2px; font-size: 16px;}
+    ol >  ol > li { margin-top:0; font-size: 14px;}
+    ol >  ol > ol > li {margin-top:0;font-size: 13px;}
+}
+
+@media screen and (min-width: 1400px) {
+    #article-container { width: 1200px; margin: 0 auto;}
+    #article-title { height: 700px;}
+    #atricle-content {
+        width:80%;
+        padding: 20px 30px;   
+    } 
+    #overflow-container {
+        width: 125vw;
+    }
+    #article-text {width: 75vw;margin-left: 12.5vw;}
+    #content-block {
+        width: 25vw;
+    }
+    /* #content-block{
+        transform: translateX(-26vw);
+    } */
+
+    ol > li { margin-top: 2px; font-size: 16px;}
+    ol >  ol > li { margin-top:0; font-size: 14px;}
+    ol >  ol > ol > li {margin-top:0;font-size: 13px;}
 }

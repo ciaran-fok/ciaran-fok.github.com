@@ -5,9 +5,10 @@
 // var contentWidth;
 // var content = $('#content-block');
 // var contentWidth = $('#content-block')[0].getBoundingClientRect().width;
+
 $(document).ready(function() {
 
-    var unfoldBtn = $('#unfold-button');
+    var unfoldBtn = $('#table-of-content');
     var foldBtn = $('#fold-button');
     $("#fold-unfold-button").click(function() {
         // reply.animate({right: "-=230px"}, 2000)
@@ -20,12 +21,12 @@ $(document).ready(function() {
             var contentWidth = $('#content-block')[0].getBoundingClientRect().width;
             // var article = $('#article-text');
             windowW = parseInt($(window).width(), 10);  
-            var distance = contentWidth + 15;
+            var distance = contentWidth + 20;
 
             console.log('distance', -distance);
             // content.animate({width: 300}, 1000)
             content[0].style.transition= 'transform 0.6s ease-in-out';
-            content[0].style.transform = `translateX(-${distance}px)`;
+            content[0].style.transform = `translateX(0px)`;
             console.log(windowW)
             if((windowW >= 992)) {
                 console.log("3");
@@ -40,12 +41,21 @@ $(document).ready(function() {
 
 
         } 
+    // fold
         else {
             windowW = parseInt($(window).width(), 10);  
+            windowH = parseInt($(window).height(), 10);  
             console.log("2");
             // content.animate({width: 0}, 1000).addClass('folded');
-            content[0].style.transition= 'transform  0.5s ease-in-out';
-            content[0].style.transform = `translateX(0)`;
+            
+            if((windowW <= 575) && (windowH > windowW)) {
+                content[0].style.transition= 'transform 0.6s ease-in-out';
+                content[0].style.transform = `translateX(90vw)`; 
+            }
+            else {
+                content[0].style.transition= 'transform  0.5s ease-in-out';
+                content[0].style.transform = `translateX(290px)`;
+            }
             if(windowW >= 992) {
                 article[0].style.transition= 'transform 0.6s ease-in-out';
                 article[0].style.transform = `translateX(0)`;
@@ -57,7 +67,7 @@ $(document).ready(function() {
         }
     });
 
-
+    
 });
 
 // $(document).ready(function() {

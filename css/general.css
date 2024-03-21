@@ -1,10 +1,18 @@
 /* Everything About The Loading Sign */
-#loading-gif {
+#loading-gif-birthday {
     position: absolute;
     left: 45vw;
     top: 40vh;
     width: 10vw;
     z-index: 999;
+}
+#loading-gif-birthday {
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    width: 10vw;
+    z-index: 999;
+    opacity: 0.8;
 }
 #loading-background{
     background-color: #242424;
@@ -495,3 +503,7 @@ footer{
         rotate: 0deg;
     }
     }
+*, html {
+
+    scroll-behavior: smooth !important;
+}

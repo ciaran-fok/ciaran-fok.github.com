@@ -4,6 +4,7 @@
   width: 300px; /* Adjust as needed */
   height: 200px; /* Adjust as needed */
   overflow: hidden;
+  transform: rotate(3deg);
 }
 
 .subblock {
@@ -66,4 +67,36 @@
 
 .next-btn {
   right: 10px;
+}
+
+.space {
+  height: 100px;
+  width: 100vw;
+}
+
+.rotator {
+  height: 150px;
+  width: 800px;
+  background-color: black;
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+
+.pic-holder {
+  position: absolute;
+  height: 130px;
+  width: 150px;
+  background-color: yellow;
+  margin-top: 10px;
+  animation: slideImages 5s infinite linear;
+}
+
+@keyframes slideImages {
+  0% { transform: translateX(50vw) }
+  50% {
+    transform: translateX(0vw);
+  }
+  100% {
+      transform: translateX(-50vw);
+  }
 }

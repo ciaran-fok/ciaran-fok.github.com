@@ -1,0 +1,78 @@
+<style>
+    #test {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        display: block;
+    }
+</style>
+<div id="test">hi</div>
+<script>
+    var text;
+function logtime(text) {
+    console.log(text, Date.now());
+}
+
+var intervalId3;
+// Get the block to display
+const block = document.getElementById('test');
+
+var checkForColbert_current = 0;
+
+// Function to check if "COLBERT" is typed
+function checkForColbert(event) {
+  // Get the key that was pressed
+  const keyPressed = event.key.toUpperCase();
+
+  // Check if the key pressed matches the next expected character in "COLBERT"
+  var colbertChars = ['C', 'O'];
+  var expectedChar = colbertChars[checkForColbert_current];
+
+  if (keyPressed === expectedChar) {
+    console.log("right", keyPressed)
+    // Remove the first character from the expected list
+    checkForColbert_current += 1;
+
+    // If all characters have been typed, display the block
+    if (checkForColbert_current == 2) {
+        // showLoadingBirthday();
+        // block.style.display = 'block';
+        // block.scrollIntoView({behavior: "smooth"});
+        // fetchHTML('birthday.html').then(function(myHTML) {
+        //     insertHtml('#birthday-container', myHTML);
+        // });
+        block.innerHTML = "you are right";
+        // loadFlag = 1;
+        // finishLoadingBirthday();
+        text = "hello";
+
+        intervalId3 = setInterval(function() { logtime(text); }, 15); 
+
+        checkForColbert_current = 0;
+    }
+  } else {
+    console.log("WRONG", keyPressed, expectedChar);
+    checkForColbert_current = 0;
+    // Reset the list if a wrong key is pressed
+    colbertChars = ['C', 'O'];
+  }
+}
+
+// Listen for keydown events on the entire document
+document.addEventListener('keydown', checkForColbert);
+
+// Set up interval outside of checkForColbert
+let intervalId;
+
+// Run this function after "COLBERT" is typed
+function runAfterColbert() {
+    // Your code here
+}
+
+// Set up interval after "COLBERT" is typed
+// document.addEventListener('keydown', function(event) {
+//     if (checkForColbert(event) === 1 && !intervalId) {
+//         intervalId = setInterval(runAfterColbert, 1000); // Example interval time: 1000 milliseconds
+//     }
+// });
+</script>

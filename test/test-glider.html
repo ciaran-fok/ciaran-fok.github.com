@@ -1,0 +1,167 @@
+<div class="rotator">
+    <div class="pic-holder">
+        <a><img src="../img/download1.jpg"></a>
+    </div>
+    <div class="pic-holder">hi2</div>
+    <div class="pic-holder">hi3</div>
+    <div class="pic-holder">hi4</div>
+    <div class="pic-holder">hi5</div>
+    <div class="pic-holder">hi6</div>
+    <div class="pic-holder">hi7</div>
+    <div class="pic-holder">hi8</div>
+    <div class="pic-holder">hi9</div>
+    <div class="pic-holder">hi10</div>
+    <div class="pic-holder">hi11</div>
+    <div class="pic-holder">hi12</div>
+</div>
+
+<style>
+.rotator {
+  height: 150px;
+  width: 800px;
+  background-color: black;
+  overflow-x: visible;
+  overflow-y: hidden;
+  /* align-items: center; */
+  transform: rotate(-3deg);
+
+}
+
+.pic-holder {
+  position: absolute;
+  height: 130px;
+  width: 150px;
+  background-color: yellow;
+  margin: 10px auto;
+  display: none;
+  color: red;
+  font-size: 30px;
+  
+}
+
+.pic-holder img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+
+.pic-holder.active {
+    display: block;
+    animation: slideImages 10s infinite linear;
+}
+
+@keyframes slideImages {
+  0% { transform: translateX(50vw) }
+  100% {
+      transform: translateX(-50vw);
+  }
+}
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const picHolders = document.querySelectorAll(".pic-holder");
+    const length = picHolders.length;
+    if(length === 1) return;
+    // const prevBtn = document.querySelector(".prev-btn");
+    // const nextBtn = document.querySelector(".next-btn");
+    let currentSubblock = 0;
+    // let isAnimating = false;
+
+    var numOfBlock = 10;
+    var animationLenghth = 20;
+
+    // function showSubblock(index) {
+    //     subblocks.forEach((subblock, i) => {
+    //     if (i === index) {
+    //         subblock.classList.add("active");
+    //     } else {
+    //         subblock.classList.remove("active");
+    //     }
+    //     });
+    // }
+
+    // function toTheLeft() {
+    //     nextSubblock = (currentSubblock + 1) % length;
+        
+    //     const currentBlock = subblocks[currentSubblock]; // current block, the object
+    //     const nextBlock = subblocks[nextSubblock]; 
+
+    //     isAnimating = true;
+    //     nextBlock.classList.add("active");
+    //     nextBlock.style.left= "100%";
+
+    //     nextBlock.classList.add("left");
+    //     currentBlock.classList.add("left");
+
+    //     setTimeout(() => {
+    //     currentBlock.classList.remove("active");
+    //     nextBlock.classList.remove("left");
+    //     currentBlock.classList.remove("left");
+    //     currentBlock.style.left = "0";
+    //     nextBlock.style.left= "0";
+    //     isAnimating = false;
+    //     }, 1000); // Transition duration
+
+    //     currentSubblock = nextSubblock;
+    // }
+
+    // function toTheRight() {
+    //     nextSubblock = (currentSubblock - 1 + length) % length;
+        
+    //     const currentBlock = subblocks[currentSubblock]; // current block, the object
+    //     const nextBlock = subblocks[nextSubblock]; 
+
+    //     isAnimating = true;
+    //     nextBlock.classList.add("active");
+    //     nextBlock.style.left= "-100%";
+
+    //     nextBlock.classList.add("right");
+    //     currentBlock.classList.add("right");
+
+    //     setTimeout(() => {
+    //     currentBlock.classList.remove("active");
+    //     nextBlock.classList.remove("right");
+    //     currentBlock.classList.remove("right");
+    //     currentBlock.style.left = "0";
+    //     nextBlock.style.left= "0";
+    //     isAnimating = false;
+    //     }, 1000); // Transition duration
+
+    //     currentSubblock = nextSubblock;
+    // }
+    
+    function nextBlock() {
+        picHolders[currentSubblock].classList.add("active");
+        picHolders[(currentSubblock + length - numOfBlock) % length].classList.remove("active");
+        currentSubblock = (currentSubblock + 1) % length;
+
+    }
+
+    // function rotateSubblocks() {
+    //     console.log("in rotate");
+    //     toTheLeft();
+    // }
+
+    // function handleButtonClicks() {
+    //     prevBtn.addEventListener("click", function () {
+    //     toTheRight();
+    //     });
+
+    //     nextBtn.addEventListener("click", function () {
+    //     toTheLeft();
+    //     });
+    // }
+
+    function startRotation() { 
+        intervalId = setInterval(nextBlock, (animationLenghth * 1000 / numOfBlock)); 
+    }
+    // function stopRotation() { clearInterval(intervalId); }
+    // function handleHover() { const blockContainer = document.querySelector(".block-container"); blockContainer.addEventListener("mouseenter", stopRotation); blockContainer.addEventListener("mouseleave", startRotation); }
+    // showSubblock(currentSubblock);
+    // handleButtonClicks();
+    // handleHover();
+    // rotateSubblocks(); // Show the first subblock immediately
+    startRotation(); // Rotate every 5 seconds
+});
+</script>

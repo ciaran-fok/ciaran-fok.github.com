@@ -274,27 +274,27 @@
     text-align: center;
 }
 .birthday-text-l {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+    /* font-family: "Arial"; */
+    font-weight: 500;
     font-size: 42px;
     line-height: 50px;
-    font: Arial;
+    font-family: 'Arial Black';
 }
 .birthday-text-m {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: 500;
     font-size: 28px;
     line-height: 36px;
     transform: translateX(30px);
-    font: Arial;
+    font-family: 'Arial Black';
 }
 .birthday-text-s {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: 500;
     font-size: 26px;
     line-height: 34px;
     transform: translateX(0px);
-    font: Arial;
+    font-family: 'Arial Black';
 }
 
 #balloon-button-container{

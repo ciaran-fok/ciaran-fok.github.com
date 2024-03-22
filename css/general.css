@@ -66,7 +66,14 @@ src: local('Segoe UI Bold Italic'), url('../font/Segoe-UI-Bold-Italic.woff') for
     font-style: normal;
     font-weight: normal;
     src: local('Tahoma'), url('../font/tahoma.ttf') format('truetype');
-    }
+}
+
+@font-face {
+    font-family: 'Arial Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Arial Black'), url('../font/ariblk.ttf') format('truetype');
+}
 
 /* Everything About The Loading Sign */
 #loading-gif {

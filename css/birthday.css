@@ -356,7 +356,9 @@
 #balloon-button div {
     color: rgb(9, 52, 116);
     font-size: 18px;
-    line-height: 28px;
+    line-height: 29px;
+    font-weight: 400;
+    font-family: 'Arial Black';
 }
 
 #balloon-button img {

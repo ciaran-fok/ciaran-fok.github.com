@@ -197,7 +197,7 @@ function initiateL(lengthL, picHoldersL) {
     console.log("in init")
     for (let i = 0; i < lengthL; i++) {
         console.log(lengthL);
-        offSetL.push(-150 + i * 198);
+        offSetL.push(-150 + i * 220);
         picHoldersL[i].style.left = `${offSetL[i]}px`;
     }
 }
@@ -221,7 +221,7 @@ function start() {
 
 function updateL(lengthL, picHoldersL, pxLenL) {
     currentTime = Date.now();
-    var diff=(currentTime-startTime) * 0.008;
+    var diff=(currentTime-startTime) * 0.015;
     for (let i = 0; i < lengthL; i++) {
         picHoldersL[i].style.left = `${ ((offSetL[i] + diff) % pxLenL) - 150}px`;
     }
@@ -229,7 +229,7 @@ function updateL(lengthL, picHoldersL, pxLenL) {
 
 function updateS(lengthS, picHoldersS, pxLenS) {
     currentTime = Date.now();
-    var diff=(currentTime-startTime) * 0.015;
+    var diff=(currentTime-startTime) * 0.008;
     for (let i = 0; i < lengthS; i++) {
         picHoldersS[i].style.left = `${ ((offSetS[i] + diff) % pxLenS) - 150}px`;
     }
@@ -249,7 +249,7 @@ function afterColbert() {
     const lengthL = picHoldersL.length;
     const lengthS = picHoldersS.length;
     const lengthSong = song.length;
-    var pxLenL = lengthL * 198;
+    var pxLenL = lengthL * 220;
     var pxLenS = lengthS * 120;
     var pxLenSong = lengthSong *  2516.6;
     console.log(lengthL);

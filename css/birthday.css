@@ -343,7 +343,7 @@
     }
 }
 
- #balloon-button:active {
+#balloon-button:active {
     background-color: rgb(73, 146, 255); 
 }
 #balloon-button:active div {
@@ -585,6 +585,12 @@
     /* animation: balloon2 1.4s linear; */
 }
 
+.a-balloon {
+    display: none;
+}
+.animate {
+    display: block;
+}
 
 #balloon-r.animate {
     animation: balloon0 0.6s;

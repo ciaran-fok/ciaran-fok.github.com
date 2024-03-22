@@ -12,7 +12,7 @@
 #front-page-text * {
     text-align: center;
     color: #FFFCF3;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
+    font-family: 'Arial', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
 }
 
 #home-title {line-height: 1.4em; }
@@ -209,13 +209,13 @@
 
 
 .news-title {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol;
-    font-size: 18px;
+    font-weight: 700;
+    font-family: "Segoe UI";
     color: #fff9eb;
     /* color: white; */
     line-height: 21px;
     height: 23px;
-    font-weight: 500;
+    /* font-weight: 500; */
     padding: 0px 0px 0px 6px;
     margin: 0px 0 5px 0;
     text-decoration: none;
@@ -337,7 +337,10 @@
 
 .category .ITB-text {
     padding: 5%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 500; color: var(--my-text-light);
+    font-family: "Segoe UI";
+    font-weight: 700; 
+    color: var(--my-text-light);
+    letter-spacing: 0.3px;
 }
 
 #get-started {
@@ -516,7 +519,8 @@ body::-webkit-scrollbar {
     #home-notice{ font-size: 14px; margin: 9px 0;}
     header {height: 650px; }
     .category .ITB-text {font-size: 20px; line-height: 26px;}
-    #recent-tags{height: 270px; justify-content: center; align-items: flex-start;}
+    #last-update {height: 50px;}
+    #recent-tags{height: 280px; justify-content: center; align-items: flex-start;}
 }
  /* Large display el*/
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -536,7 +540,7 @@ body::-webkit-scrollbar {
         height: 124.5px;
         padding: 5%;
     }
-    #last-update {height: 75px;}
+    #last-update {height: 65px;}
     .news p {
         font-size: 17px;
     }
@@ -558,7 +562,7 @@ body::-webkit-scrollbar {
         align-items: center;
         overflow: hidden;
     }
-    #recent-tags{height: 295px; justify-content: center; align-items: flex-start;}
+    #recent-tags{height: 305px; justify-content: center; align-items: flex-start;}
 }
 @media screen and (min-width: 1400px) {
     #front-page-text { 
@@ -580,7 +584,7 @@ body::-webkit-scrollbar {
         height: 124.5px;
         padding: 5%;
     }
-    #last-update {height: 75px;}
+    #last-update {height: 65px;}
     .news p {
         font-size: 17px;
     }
@@ -603,7 +607,7 @@ body::-webkit-scrollbar {
         align-items: center;
         overflow: hidden;
     }
-    #recent-tags{height: 295px; justify-content: center; align-items: flex-start;}
+    #recent-tags{height: 305px; justify-content: center; align-items: flex-start;}
 
 }
 

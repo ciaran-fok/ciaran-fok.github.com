@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'Brush Script';
+    src: url('../font/BrushScript.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+}
+
+@font-face {
+    font-family: "Proxima-Nova";
+    src: url("../font/FontsFree-Net-Proxima-Nova-Bold.otf") format("opentype");
+}
+
 /* Everything About The Loading Sign */
-#loading-gif-birthday {
+#loading-gif {
     position: absolute;
     left: 45vw;
     top: 40vh;

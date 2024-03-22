@@ -155,12 +155,13 @@ const snippetsAddress = "../snippets/";
 
 function showLoadingBirthday() {
     const loadingElement = document.querySelector("#birthdaytoload");
-    loadingElement.innerHTML = "<img src='img/Spinner-1.1s-437px.gif' id='loading-gif'>";
+    loadingElement.innerHTML = "<img src='img/Spinner-1.1s-437px.gif' id='loading-gif-birthday'>";
 }
 
 function finishLoadingBirthday() {
     const loadingElement = document.querySelector("#birthdaytoload");
     loadingElement.innerHTML = "";
+    loadingElement.style.display='none';
 }
 
 // convenience function 
@@ -197,7 +198,7 @@ function initiateL(lengthL, picHoldersL) {
     console.log("in init")
     for (let i = 0; i < lengthL; i++) {
         console.log(lengthL);
-        offSetL.push(-150 + i * 220);
+        offSetL.push(-250 + i * 220);
         picHoldersL[i].style.left = `${offSetL[i]}px`;
     }
 }
@@ -223,26 +224,71 @@ function updateL(lengthL, picHoldersL, pxLenL) {
     currentTime = Date.now();
     var diff=(currentTime-startTime) * 0.015;
     for (let i = 0; i < lengthL; i++) {
-        picHoldersL[i].style.left = `${ ((offSetL[i] + diff) % pxLenL) - 150}px`;
+        var position = ((offSetL[i] + diff) % pxLenL) - 250;
+        picHoldersL[i].style.left = `${position}px`;
+        if (position < -230 || position > 1440) {
+            picHoldersL[i].style.display = 'none';
+        } else {
+            picHoldersL[i].style.display = 'block';
+        }
     }
 }
 
 function updateS(lengthS, picHoldersS, pxLenS) {
     currentTime = Date.now();
-    var diff=(currentTime-startTime) * 0.008;
+    var diff=(currentTime-startTime) * 0.009;
     for (let i = 0; i < lengthS; i++) {
-        picHoldersS[i].style.left = `${ ((offSetS[i] + diff) % pxLenS) - 150}px`;
+        var position = ((offSetS[i] + diff) % pxLenS) - 150;
+        picHoldersS[i].style.left = `${ position }px`;
+
+        if (position < -100 || position > 1440) {
+            picHoldersS[i].style.display = 'none';
+        } else {
+            picHoldersS[i].style.display = 'block';
+        }
     }
 }
 function updateSong(lengthSong, song, pxLenSong) {
     currentTime = Date.now();
-    var diff=(currentTime-startTime) * (0.004);
+    var diff=(currentTime-startTime) * (0.005);
     for (let i = 0; i < lengthSong; i++) {
-        song[i].style.left = `${ -((offSetSong[i] + diff) % pxLenSong) +  2516.6}px`;
+
+        var position = -((offSetSong[i] + diff) % pxLenSong) +  2516.6;
+        song[i].style.left = `${ position}px`;
+        // picHoldersS[i].style.left = `${ position }px`;
+
+        if (position < -2516.6 || position > 1440) {
+            song[i].style.display = 'none';
+        } else {
+            song[i].style.display = 'block';
+        }
+        
     }
 }
 
 function afterColbert() {
+    // var imgAll = document.getElementById("birthday").querySelectorAll("img");
+    // // const imgAll = document.querySelectorAll("img");
+    // console.log(imgAll);
+    // var loadFlag = false;
+
+    // while(!loadFlag) {
+    //     console.log("here out")
+    //     setTimeout(function() {
+    //         console.log("here")
+    //         var allGood = true;
+    //         for(var i = 0; i < imgAll.length; i++) {
+    //             if (!imgAll[i].complete || imgAll[i].naturalWidth === 0) {
+    //                 console.log("unfinished", imgAll[i].complete, imgAll[i].naturalWidth);
+    //                 allGood = false;
+    //             }
+    //         }
+    //         loadFlag = allGood;
+    //     }, 1000)
+    // }
+    // for(var i = 0; i < imgAll.length; i++) {
+    //     console.log("unfinished", imgAll[i].complete, imgAll[i].naturalWidth);
+    // }
     const picHoldersL = document.querySelectorAll(".pic-holder-l");
     const picHoldersS = document.querySelectorAll(".pic-holder-s");
     const song = document.querySelectorAll(".song");
@@ -286,6 +332,27 @@ function afterColbert() {
 }
 
 
+function checkload() {
+    var imgAll = document.getElementById("birthday").querySelectorAll("img");
+    console.log(imgAll);
+    var imgLen = imgAll.length;
+    var imagesLoaded = 1;
+
+    for(var i = 0; i < imgLen; i++){
+        console.log("yes");
+        imgAll[i].onload = function(){
+            console.log("yes");
+            imagesLoaded++;
+            if(imagesLoaded == imgLen){
+                // allLoaded();
+                console.log("all loaded");
+                finishLoadingBirthday();
+            }
+        }
+    }
+    
+}
+
 
 
 // Get the block to display
@@ -314,9 +381,7 @@ function checkForColbert(event) {
         block.scrollIntoView({behavior: "smooth"});
         fetchHTML('birthday.html').then(function(myHTML) {
             insertHtml('#birthday-container', myHTML);
-        }).then(afterColbert);
-        
-        finishLoadingBirthday();
+        }).then(afterColbert).then(checkload);
     }
   } else {
     console.log("WRONG");
